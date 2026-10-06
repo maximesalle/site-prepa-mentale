@@ -95,8 +95,6 @@ markCurrentSection();
       button.setAttribute('aria-pressed', String(active));
     });
 
-    document.querySelector('#situation-panel-title').textContent =
-      situation.title;
     document.querySelector('#situation-description').textContent =
       situation.description;
     document.querySelector('#situation-tools-text').textContent =

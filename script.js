@@ -81,7 +81,8 @@ markCurrentSection();
     if (mobile.matches) {
       buttons[selected].insertAdjacentElement('afterend', panel);
     } else {
-      explorer.append(panel);
+    explorer.querySelector('.situations-choices')
+  .insertAdjacentElement('afterend', panel);
     }
   }
 

@@ -1661,3 +1661,178 @@ html {
     line-height:1.6;
   }
 }
+
+/* Vos situations — contextes, difficultés et bénéfices */
+
+.situations-v2 {
+  padding: 60px clamp(23px, 5vw, 80px);
+  background: var(--paper);
+}
+
+.situations-v2-heading {
+  max-width: 650px;
+  margin-bottom: 25px;
+}
+
+.situations-v2-heading .eyebrow {
+  margin: 0 0 18px;
+}
+
+.situations-v2-heading h2 {
+  font-family: var(--serif) !important;
+  font-size: var(--type-heading) !important;
+  font-weight: 500;
+  line-height: 1.16;
+  margin: 0 0 16px;
+}
+
+.situations-v2-heading > p:last-child {
+  font-size: 14px !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.situations-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.situations-domains li {
+  padding: 8px 14px;
+  border: 1px solid rgba(48, 38, 49, 0.2);
+  border-radius: 30px;
+  font-size: 14px !important;
+}
+
+.situations-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.situation-card {
+  background: #ede4e7;
+  border-radius: 4px 24px 4px 4px;
+  overflow: hidden;
+}
+
+.situation-card:nth-child(2),
+.situation-card:nth-child(5) {
+  background: var(--apricot);
+}
+
+.situation-card summary {
+  padding: 26px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.situation-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.situation-card summary::marker {
+  content: "";
+}
+
+.situation-card summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -4px;
+}
+
+.situation-card h3 {
+  font-family: var(--serif) !important;
+  font-size: 24px !important;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 17px;
+}
+
+.situation-card p {
+  font-size: 14px !important;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.situation-card .situation-gain {
+  padding-top: 17px;
+  border-top: 1px solid rgba(48, 38, 49, 0.18);
+  font-weight: 600;
+}
+
+.situation-discover {
+  display: inline-block;
+  font-size: 13px !important;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 5px;
+}
+
+.situation-discover::after {
+  content: " +";
+}
+
+.situation-card[open] .situation-discover::after {
+  content: " −";
+}
+
+.situation-work {
+  padding: 0 26px 26px;
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+.situations-invitation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.situations-invitation p {
+  max-width: 600px;
+  font-size: 14px !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.situations-invitation .button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+  .situations-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .situations-v2 {
+    padding: 48px 23px;
+  }
+
+  .situations-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .situation-card summary {
+    padding: 23px;
+  }
+
+  .situation-work {
+    padding: 0 23px 23px;
+  }
+
+  .situations-invitation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

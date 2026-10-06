@@ -77,129 +77,114 @@
           </article>
         </div>
       </section>
-<section class="situations situations-v2" id="situations"
+<section class="situations situations-editorial" id="situations"
          aria-labelledby="situations-title">
 
-  <div class="situations-v2-heading">
-    <p class="eyebrow">02 / VOS SITUATIONS</p>
-    <h2 id="situations-title">Qu’est-ce qui vous amène ?</h2>
+  <p class="eyebrow">02 / VOS SITUATIONS</p>
+
+  <div class="situations-introduction">
+    <h2 id="situations-title">
+      Ce que nous pouvons<br>travailler ensemble
+    </h2>
     <p>
-      Dans le sport, au travail ou au quotidien, certains moments
-      demandent davantage de confiance, de sérénité ou d’élan.
+      La préparation mentale vous aide à mobiliser vos ressources
+      pour relever un défi, traverser une difficulté ou avancer
+      dans un projet qui compte pour vous.
     </p>
   </div>
 
-  <ul class="situations-domains" aria-label="Les domaines d’accompagnement">
-    <li>Sport</li>
-    <li>Vie quotidienne</li>
-    <li>Études & examens</li>
-    <li>Vie professionnelle</li>
-  </ul>
+  <p class="situations-contexts">
+    <span>Sport</span>
+    <span>Vie quotidienne</span>
+    <span>Études & examens</span>
+    <span>Vie professionnelle</span>
+  </p>
 
-  <div class="situations-cards">
+  <div class="situations-explorer">
 
-    <details class="situation-card">
-      <summary>
-        <h3>« Le jour J, je perds mes moyens. »</h3>
-        <p>
-          Vous avez préparé votre compétition, votre oral ou votre
-          présentation. Pourtant, la pression vous fait perdre vos repères.
+    <div class="situations-choices"
+         aria-label="Choisir une situation">
+
+      <button type="button" class="situation-choice is-selected"
+              data-situation="0" aria-pressed="true"
+              aria-controls="situation-panel">
+        <span class="situation-number">01</span>
+        <span class="situation-name">Le jour J, je perds mes moyens.</span>
+      </button>
+
+      <button type="button" class="situation-choice"
+              data-situation="1" aria-pressed="false"
+              aria-controls="situation-panel">
+        <span class="situation-number">02</span>
+        <span class="situation-name">Je sais ce que je veux faire, mais je repousse.</span>
+      </button>
+
+      <button type="button" class="situation-choice"
+              data-situation="2" aria-pressed="false"
+              aria-controls="situation-panel">
+        <span class="situation-number">03</span>
+        <span class="situation-name">Je doute de moi, même quand je suis capable.</span>
+      </button>
+
+      <button type="button" class="situation-choice"
+              data-situation="3" aria-pressed="false"
+              aria-controls="situation-panel">
+        <span class="situation-number">04</span>
+        <span class="situation-name">Après un échec, j’ai du mal à repartir.</span>
+      </button>
+
+      <button type="button" class="situation-choice"
+              data-situation="4" aria-pressed="false"
+              aria-controls="situation-panel">
+        <span class="situation-number">05</span>
+        <span class="situation-name">Je me mets constamment sous pression.</span>
+      </button>
+
+    </div>
+
+    <div class="situation-panel" id="situation-panel"
+         role="region" aria-labelledby="situation-panel-title"
+         aria-live="polite" aria-atomic="true">
+
+      <p class="situation-panel-label">CE QUE VOUS VIVEZ</p>
+      <h3 id="situation-panel-title">Être prêt, mais perdre ses repères.</h3>
+      <p id="situation-description">
+        Vous avez préparé votre compétition, votre oral ou votre
+        présentation. Pourtant, la pression prend le dessus :
+        votre concentration baisse et vous n’arrivez plus à montrer
+        ce dont vous êtes capable.
+      </p>
+
+      <div class="situation-tools">
+        <p class="situation-panel-label">CE QUE NOUS POUVONS TRAVAILLER</p>
+        <p id="situation-tools-text">
+          Réguler le stress et les émotions, renforcer votre concentration
+          et construire une routine de préparation qui vous correspond.
         </p>
-        <p class="situation-gain">
+      </div>
+
+      <div class="situation-outcome">
+        <p class="situation-panel-label">POUR VOUS PERMETTRE DE</p>
+        <p id="situation-outcome-text">
           Vous sentir plus serein et mobiliser vos capacités
           quand cela compte.
         </p>
-        <span class="situation-discover">Ce que nous pouvons travailler</span>
-      </summary>
-      <div class="situation-work">
-        Réguler le stress et les émotions, renforcer la concentration
-        et construire une routine de préparation qui vous correspond.
       </div>
-    </details>
 
-    <details class="situation-card">
-      <summary>
-        <h3>« Je sais ce que je veux faire, mais je repousse. »</h3>
-        <p>
-          Reprendre le sport, commencer les révisions, lancer un projet :
-          vous attendez le bon moment et finissez par culpabiliser.
-        </p>
-        <p class="situation-gain">
-          Commencer plus facilement et avancer avec davantage de régularité.
-        </p>
-        <span class="situation-discover">Ce que nous pouvons travailler</span>
-      </summary>
-      <div class="situation-work">
-        Comprendre ce qui freine le démarrage, identifier ce qui vous
-        motive et installer des habitudes accessibles dans votre quotidien.
-      </div>
-    </details>
-
-    <details class="situation-card">
-      <summary>
-        <h3>« Je doute de moi, même quand je suis capable. »</h3>
-        <p>
-          Vous vous comparez, redoutez le regard des autres ou
-          hésitez à prendre votre place.
-        </p>
-        <p class="situation-gain">
-          Reconnaître vos ressources et oser vous engager.
-        </p>
-        <span class="situation-discover">Ce que nous pouvons travailler</span>
-      </summary>
-      <div class="situation-work">
-        Mieux vous connaître, vous appuyer sur vos forces
-        et développer un dialogue intérieur plus constructif.
-      </div>
-    </details>
-
-    <details class="situation-card">
-      <summary>
-        <h3>« Après un échec, j’ai du mal à repartir. »</h3>
-        <p>
-          Une déception, une blessure ou un objectif manqué :
-          vous ruminez et craignez que cela recommence.
-        </p>
-        <p class="situation-gain">
-          Retrouver des repères, de la confiance et une direction pour la suite.
-        </p>
-        <span class="situation-discover">Ce que nous pouvons travailler</span>
-      </summary>
-      <div class="situation-work">
-        Accueillir les émotions, prendre du recul sur ce qui s’est passé
-        et préparer les prochaines étapes à votre rythme.
-      </div>
-    </details>
-
-    <details class="situation-card">
-      <summary>
-        <h3>« J’avance, mais je me mets constamment sous pression. »</h3>
-        <p>
-          Vous attendez beaucoup de vous-même. Chaque objectif devient
-          une nouvelle exigence et vous profitez peu de vos progrès.
-        </p>
-        <p class="situation-gain">
-          Poursuivre vos ambitions tout en préservant votre équilibre.
-        </p>
-        <span class="situation-discover">Ce que nous pouvons travailler</span>
-      </summary>
-      <div class="situation-work">
-        Clarifier ce qui compte pour vous, ajuster vos attentes
-        et donner une place à la récupération et au plaisir.
-      </div>
-    </details>
+    </div>
 
   </div>
 
-  <div class="situations-invitation">
+  <div class="situations-footer">
     <p>
-      Ces exemples ne couvrent pas toutes les situations.
-      Parlons de la vôtre pour voir comment je peux vous accompagner.
+      Vous ne vous retrouvez pas exactement dans ces exemples ?
+      Parlons de votre situation pour voir comment je peux vous accompagner.
     </p>
     <a class="button coral" href="contact.html">
       Parlons de votre objectif
     </a>
   </div>
+
 </section>
       <section class="method" id="deroulement">
         <div class="method-image">

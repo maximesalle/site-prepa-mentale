@@ -1961,3 +1961,34 @@ html {
     white-space: nowrap;
   }
 }
+
+/* Domaines intégrés visuellement à l’introduction */
+#situations > .situations-contexts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 6px 0;
+  margin: 8px 0 24px;
+}
+
+#situations > .situations-contexts span {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #715f76;
+  white-space: nowrap;
+}
+
+#situations > .situations-contexts span:not(:last-child)::after {
+  content: "·";
+  display: inline-block;
+  margin: 0 12px;
+}
+
+@media (min-width: 701px) {
+  #situations > .situations-contexts {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+}

@@ -2781,3 +2781,242 @@ html {
     padding: 30px 22px 22px;
   }
 }
+/* FORMULES — prix visibles, contenu compact et cumulatif */
+
+#offres .offers-packages-heading {
+  margin: 34px 0 30px;
+  padding-top: 24px;
+}
+
+#offres .offers-packages-heading .offers-subtitle {
+  margin-bottom: 12px;
+}
+
+/* Bandeau de lancement */
+#offres .offers-launch {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  background: var(--offers-fluo, #dfff00);
+  color: var(--ink);
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#offres .offers-bilan-note {
+  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.45;
+}
+
+/* Cartes */
+#offres .offers-packages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+#offres .offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 27px 22px 20px;
+  border: 1px solid rgba(48, 38, 49, 0.25);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+#offres .offer-card .offer-card-title {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  max-width: calc(100% - 28px);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 8px;
+  background: var(--paper);
+  font-family: var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Sous-titres : besoin auquel répond la formule */
+#offres .offer-card .offer-purpose {
+  min-height: 4.35em;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 15px !important;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+/* Prix de lancement et tarif suivant */
+#offres .offer-card .offer-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid rgba(48, 38, 49, 0.18);
+}
+
+#offres .offer-card .offer-launch-price {
+  display: block;
+  font-family: var(--sans) !important;
+  font-size: 38px !important;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+#offres .offer-card .offer-reference {
+  margin: 0;
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: normal;
+  opacity: 0.75;
+}
+
+#offres .offer-session-count {
+  margin: 6px 0 14px;
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Livrables cumulatifs */
+#offres .offer-deliverables {
+  margin-bottom: 18px;
+}
+
+#offres .offer-inclusion-label {
+  margin: 0 0 10px;
+  font-size: 13px !important;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+#offres .offer-plus {
+  display: inline;
+  padding: 2px 5px;
+  background: var(--offers-fluo, #dfff00);
+  color: var(--ink);
+  font-size: 13px !important;
+  font-weight: 600;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+#offres .offer-deliverables ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#offres .offer-deliverables li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px !important;
+  line-height: 1.45;
+}
+
+#offres .offer-deliverables li::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+/* Boutons alignés en bas */
+#offres .offer-cta {
+  justify-content: center;
+  width: 100%;
+  gap: 0;
+  margin-top: auto;
+  padding: 12px 10px;
+  background: var(--coral);
+  color: var(--ink);
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#offres .offer-cta:hover {
+  background: var(--apricot);
+  transform: translateY(-2px);
+}
+
+#offres .offer-cta:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Parcours */
+#offres .offer-card-featured {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+#offres .offer-card-featured .offer-card-title {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+#offres .offer-card-featured .offer-purpose {
+  color: var(--paper);
+}
+
+#offres .offer-card-featured .offer-launch-price {
+  color: var(--offers-fluo, #dfff00);
+}
+
+#offres .offer-card-featured .offer-price {
+  border-top-color: rgba(245, 240, 233, 0.25);
+}
+
+#offres .offer-card-featured .offer-cta {
+  background: var(--offers-fluo, #dfff00);
+  color: var(--ink);
+}
+
+#offres .offer-card-featured .offer-cta:hover {
+  background: var(--paper);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  #offres .offers-packages {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #offres .offer-card .offer-purpose {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #offres .offer-cta {
+    transition: none;
+  }
+
+  #offres .offer-cta:hover {
+    transform: none;
+  }
+}

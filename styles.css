@@ -1996,3 +1996,27 @@ html {
     padding: 24px;
   }
 }
+
+/* Position des situations et de leur panneau sur ordinateur */
+@media (min-width: 701px) {
+  .situations-editorial .situations-explorer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .situations-editorial .situations-choices {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .situations-editorial .situation-panel {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .situations-editorial .situations-footer {
+    grid-column: 1 / -1;
+  }
+}

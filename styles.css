@@ -2558,3 +2558,82 @@ html {
   margin-top: 0;
   margin-bottom: 28px;
 }
+
+/* Progression sportive : chevrons ouverts vers l’avant */
+#offres .offers-step:not(:last-child)::before,
+#offres .offers-step:not(:last-child)::after {
+  clip-path: polygon(
+    0 0,
+    42% 0,
+    100% 50%,
+    42% 100%,
+    0 100%,
+    58% 50%
+  );
+  pointer-events: none;
+}
+
+#offres .offers-step:not(:last-child)::before {
+  background: linear-gradient(
+    90deg,
+    rgba(232, 109, 85, 0.08),
+    rgba(232, 109, 85, 0.75)
+  );
+}
+
+#offres .offers-step:not(:last-child)::after {
+  background: linear-gradient(
+    90deg,
+    rgba(223, 255, 0, 0.12),
+    var(--offers-fluo) 85%
+  );
+}
+
+/* Ordinateur : toutes les transitions vers la droite */
+@media (min-width: 1101px) {
+  #offres .offers-step:not(:last-child)::before,
+  #offres .offers-step:not(:last-child)::after {
+    top: 72px;
+    bottom: auto;
+    left: auto;
+    width: 42px;
+    height: 76px;
+    transform: none;
+  }
+
+  #offres .offers-step:not(:last-child)::before {
+    right: -29px;
+  }
+
+  #offres .offers-step:not(:last-child)::after {
+    right: -42px;
+  }
+}
+
+/* Tablette et mobile : progression vers le bas */
+@media (max-width: 1100px) {
+  #offres .offers-step:not(:last-child)::before,
+  #offres .offers-step:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    width: 28px;
+    height: 44px;
+    left: 48px;
+    transform: rotate(90deg);
+  }
+
+  #offres .offers-step:not(:last-child)::before {
+    bottom: -24px;
+  }
+
+  #offres .offers-step:not(:last-child)::after {
+    bottom: -36px;
+  }
+}
+
+@media (max-width: 700px) {
+  #offres .offers-step:not(:last-child)::before,
+  #offres .offers-step:not(:last-child)::after {
+    left: 32px;
+  }
+}

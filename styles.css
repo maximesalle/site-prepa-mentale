@@ -2631,9 +2631,10 @@ html {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1101px) {
   #offres .offers-step:not(:last-child)::before,
   #offres .offers-step:not(:last-child)::after {
-    left: 32px;
+    top: 48px;
+    height: 124px;
   }
 }

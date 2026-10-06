@@ -1949,3 +1949,15 @@ html {
     grid-row: 5;
   }
 }
+
+@media (min-width: 701px) {
+  #situations > .situations-contexts {
+    grid-column: 1 / -1;
+    flex-wrap: nowrap;
+    gap: 12px 24px;
+  }
+
+  #situations > .situations-contexts span {
+    white-space: nowrap;
+  }
+}

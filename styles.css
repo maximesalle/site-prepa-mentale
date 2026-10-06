@@ -1920,3 +1920,79 @@ html {
     animation: none;
   }
 }
+
+/* Vos situations — équilibre du panneau et regroupement des contenus */
+
+.situations-editorial .situations-introduction {
+  display: block;
+}
+
+.situations-editorial .situations-introduction h2 {
+  margin-bottom: 14px;
+}
+
+.situations-editorial .situations-introduction > p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+.situations-editorial .situation-panel {
+  padding: 28px;
+  text-align: left;
+}
+
+.situations-editorial #situation-description,
+.situations-editorial #situation-tools-text,
+.situations-editorial #situation-outcome-text {
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.situations-editorial .situation-panel-label {
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.4;
+  margin: 0 0 7px;
+}
+
+.situations-editorial .situation-tools {
+  margin-top: 20px;
+}
+
+.situations-editorial .situation-outcome {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.situations-editorial #situation-outcome-text {
+  font-weight: 500;
+}
+
+.situations-editorial .situations-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.situations-editorial .situations-footer > p {
+  max-width: 610px;
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .situations-editorial .situation-panel {
+    padding: 24px;
+  }
+}

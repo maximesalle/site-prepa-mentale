@@ -2471,3 +2471,90 @@ html {
     transform: translateY(-5px) rotate(-12deg);
   }
 }
+
+/* Citron électrique et progression plus abstraite */
+#offres {
+  --offers-fluo: #dfff00;
+}
+
+#offres .offers-free {
+  background: var(--offers-fluo);
+}
+
+/* Fragments effilés : le mouvement remplace la flèche */
+#offres .offers-step:not(:last-child)::before {
+  background: linear-gradient(
+    105deg,
+    transparent 8%,
+    rgba(223, 255, 0, 0.35) 40%,
+    var(--offers-fluo) 95%
+  );
+  clip-path: polygon(0 35%, 100% 0, 82% 30%, 8% 58%);
+}
+
+#offres .offers-step:not(:last-child)::after {
+  background: linear-gradient(
+    105deg,
+    transparent 5%,
+    rgba(232, 109, 85, 0.35) 45%,
+    rgba(232, 109, 85, 0.9) 95%
+  );
+  clip-path: polygon(0 48%, 82% 68%, 100% 100%, 12% 72%);
+}
+
+/* Ordinateur */
+@media (min-width: 1101px) {
+  #offres .offers-step:not(:last-child)::before {
+    top: 60px;
+    right: -47px;
+    width: 72px;
+    height: 60px;
+    transform: rotate(-18deg);
+  }
+
+  #offres .offers-step:not(:last-child)::after {
+    top: 88px;
+    right: -42px;
+    width: 64px;
+    height: 52px;
+    transform: rotate(14deg);
+  }
+
+  #offres .offers-step:nth-child(2)::before {
+    transform: translateY(12px) rotate(8deg);
+  }
+
+  #offres .offers-step:nth-child(2)::after {
+    transform: translateY(-10px) rotate(-16deg);
+  }
+
+  #offres .offers-step:nth-child(3)::before {
+    transform: translateY(-8px) rotate(-26deg);
+  }
+
+  #offres .offers-step:nth-child(3)::after {
+    transform: translateY(6px) rotate(20deg);
+  }
+}
+
+/* Tablette et mobile : mouvement descendant */
+@media (max-width: 1100px) {
+  #offres .offers-step:not(:last-child)::before,
+  #offres .offers-step:not(:last-child)::after {
+    top: auto;
+    bottom: -32px;
+    width: 48px;
+    height: 38px;
+    transform: rotate(90deg);
+  }
+}
+
+/* Espace après suppression du grand titre */
+#offres > .eyebrow {
+  margin-bottom: 18px;
+}
+
+#offres > .offers-intro {
+  margin-top: 0;
+  margin-bottom: 28px;
+}

@@ -1928,26 +1928,23 @@ html {
 }
 
 /* Respect des préférences de mouvement */
-@media (prefers-reduced-motion: reduce) {
-  .situation-choice {
-    transition: none;
+@media (min-width: 701px) {
+  #situations > .situations-contexts {
+    grid-column: 1;
+    grid-row: 3;
   }
 
-  .situation-panel.is-changing {
-    animation: none;
-  }
-}
-  .situations-editorial .situations-choices {
+  #situations .situations-choices {
     grid-column: 1;
     grid-row: 4;
   }
 
-  .situations-editorial .situation-panel {
+  #situations .situation-panel {
     grid-column: 2;
     grid-row: 4;
   }
 
-  .situations-editorial .situations-footer {
+  #situations .situations-footer {
     grid-column: 1;
     grid-row: 5;
   }

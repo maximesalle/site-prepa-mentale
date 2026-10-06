@@ -1937,3 +1937,18 @@ html {
     animation: none;
   }
 }
+  .situations-editorial .situations-choices {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .situations-editorial .situation-panel {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .situations-editorial .situations-footer {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}

@@ -1661,8 +1661,9 @@ html {
     line-height:1.6;
   }
 }
-/* Vos situations — composition éditoriale */
+/* VOS SITUATIONS */
 
+/* Introduction */
 .situations-editorial {
   padding: 54px clamp(23px, 5vw, 80px);
   background: var(--paper);
@@ -1672,34 +1673,28 @@ html {
   margin: 0 0 24px;
 }
 
-.situations-introduction {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
-  gap: 60px;
-}
-
 .situations-introduction h2 {
+  margin: 0 0 14px;
   font-family: var(--serif) !important;
   font-size: 34px !important;
   font-weight: 500;
   line-height: 1.16;
   letter-spacing: -0.015em;
-  margin: 0;
 }
 
 .situations-introduction > p {
-  max-width: 490px;
-  font-size: 14px !important;
-  line-height: 1.6;
+  max-width: 650px;
   margin: 0;
+  font-size: 15px !important;
+  line-height: 1.55;
 }
 
+/* Domaines */
 .situations-contexts {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 30px;
-  margin: 26px 0 36px;
+  gap: 10px 20px;
+  margin: 26px 0 18px;
 }
 
 .situations-contexts span {
@@ -1709,23 +1704,18 @@ html {
   color: var(--coral);
 }
 
-.situations-explorer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
+/* Liste des situations */
 .situations-choices {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .situation-choice {
   display: grid;
-  grid-template-columns: 35px 1fr;
-  gap: 14px;
+  grid-template-columns: 35px minmax(0, 1fr);
   align-items: baseline;
+  gap: 14px;
   width: 100%;
   padding: 23px 18px;
   border: 0;
@@ -1769,53 +1759,69 @@ html {
   line-height: 1.3;
 }
 
+/* Panneau descriptif */
 .situation-panel {
-  padding: 34px;
-  background: #ede4e7;
   min-width: 0;
+  padding: 28px;
+  background: #ede4e7;
+  text-align: left;
+}
+
+.situations-editorial #situation-description,
+.situations-editorial #situation-tools-text,
+.situations-editorial #situation-outcome-text {
+  margin: 0;
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  font-weight: 400;
+  line-height: 1.55;
 }
 
 .situation-panel-label {
-  font-size: 11px !important;
+  margin: 0 0 7px;
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
   font-weight: 600;
-  letter-spacing: 0.07em;
-  line-height: 1.5;
-  margin: 0 0 12px;
-}
-
-.situation-panel h3 {
-  font-family: var(--serif) !important;
-  font-size: 30px !important;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0 0 17px;
-}
-
-#situation-description,
-#situation-tools-text {
-  font-size: 14px !important;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .situation-tools {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .situation-outcome {
-  margin-top: 26px;
-  padding-top: 23px;
+  margin-top: 20px;
+  padding-top: 20px;
   border-top: 1px solid rgba(48, 38, 49, 0.18);
 }
 
-#situation-outcome-text {
-  font-family: var(--serif) !important;
-  font-size: 22px !important;
-  font-weight: 400;
-  line-height: 1.35;
-  margin: 0;
+.situations-editorial #situation-outcome-text {
+  font-weight: 500;
 }
 
+/* Invitation à échanger */
+.situations-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.situations-footer > p {
+  max-width: 610px;
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+.situations-footer .button {
+  max-width: 100%;
+}
+
+/* Animation du panneau */
 .situation-panel.is-changing {
   animation: situation-appear 220ms ease;
 }
@@ -1831,53 +1837,69 @@ html {
   }
 }
 
-.situations-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;
-  margin-top: 30px;
-}
+/* Ordinateur : domaines, panneau et contact à droite */
+@media (min-width: 701px) {
+  .situations-editorial {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    align-items: start;
+  }
 
-.situations-footer p {
-  max-width: 610px;
-  font-size: 14px !important;
-  line-height: 1.6;
-  margin: 0;
-}
+  .situations-editorial > .eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
 
-.situations-footer .button {
-  flex-shrink: 0;
-}
+  .situations-introduction {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
 
-@media (max-width: 1000px) {
-  .situations-introduction,
+  .situations-contexts {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
   .situations-explorer {
-    gap: 30px;
+    display: contents;
+  }
+
+  .situations-choices {
+    grid-column: 1;
+    grid-row: 4 / 6;
   }
 
   .situation-panel {
-    padding: 26px;
+    grid-column: 2;
+    grid-row: 4;
+    margin: 0;
+  }
+
+  .situations-footer {
+    grid-column: 2;
+    grid-row: 5;
   }
 }
 
+/* Petits ordinateurs et tablettes */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .situations-editorial {
+    column-gap: 30px;
+  }
+}
+
+/* Mobile : panneau sous la situation sélectionnée */
 @media (max-width: 700px) {
   .situations-editorial {
     padding: 48px 23px;
   }
 
-  .situations-introduction,
-  .situations-explorer {
-    display: block;
-  }
-
   .situations-introduction h2 {
     font-size: 30px !important;
-    margin-bottom: 18px;
   }
 
   .situations-contexts {
-    gap: 10px 20px;
     margin: 24px 0 28px;
   }
 
@@ -1886,9 +1908,9 @@ html {
   }
 
   .situation-choice {
-    padding: 20px 12px;
-    grid-template-columns: 28px 1fr;
+    grid-template-columns: 28px minmax(0, 1fr);
     gap: 10px;
+    padding: 20px 12px;
   }
 
   .situation-name {
@@ -1900,17 +1922,12 @@ html {
     margin: 0 0 12px;
   }
 
-  .situation-panel h3 {
-    font-size: 28px !important;
-  }
-
   .situations-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    margin-top: 28px;
   }
 }
 
+/* Respect des préférences de mouvement */
 @media (prefers-reduced-motion: reduce) {
   .situation-choice {
     transition: none;
@@ -1918,105 +1935,5 @@ html {
 
   .situation-panel.is-changing {
     animation: none;
-  }
-}
-
-/* Vos situations — équilibre du panneau et regroupement des contenus */
-
-.situations-editorial .situations-introduction {
-  display: block;
-}
-
-.situations-editorial .situations-introduction h2 {
-  margin-bottom: 14px;
-}
-
-.situations-editorial .situations-introduction > p {
-  max-width: 650px;
-  margin: 0;
-  font-size: 15px !important;
-  line-height: 1.55;
-}
-
-.situations-editorial .situation-panel {
-  padding: 28px;
-  text-align: left;
-}
-
-.situations-editorial #situation-description,
-.situations-editorial #situation-tools-text,
-.situations-editorial #situation-outcome-text {
-  font-family: var(--sans) !important;
-  font-size: 15px !important;
-  font-weight: 400;
-  line-height: 1.55;
-  margin: 0;
-}
-
-.situations-editorial .situation-panel-label {
-  font-family: var(--sans) !important;
-  font-size: 13px !important;
-  font-weight: 600;
-  letter-spacing: normal;
-  text-transform: none;
-  line-height: 1.4;
-  margin: 0 0 7px;
-}
-
-.situations-editorial .situation-tools {
-  margin-top: 20px;
-}
-
-.situations-editorial .situation-outcome {
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-.situations-editorial #situation-outcome-text {
-  font-weight: 500;
-}
-
-.situations-editorial .situations-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.situations-editorial .situations-footer > p {
-  max-width: 610px;
-  margin: 0;
-  font-size: 15px !important;
-  line-height: 1.55;
-}
-
-@media (max-width: 700px) {
-  .situations-editorial .situation-panel {
-    padding: 24px;
-  }
-}
-
-/* Position des situations et de leur panneau sur ordinateur */
-@media (min-width: 701px) {
-  .situations-editorial .situations-explorer {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .situations-editorial .situations-choices {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .situations-editorial .situation-panel {
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0;
-  }
-
-  .situations-editorial .situations-footer {
-    grid-column: 1 / -1;
   }
 }

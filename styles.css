@@ -2234,3 +2234,197 @@ html {
     gap: 12px;
   }
 }
+
+/* OFFRES — blocs éditoriaux et progression abstraite */
+
+#offres {
+  background: #f2e2d6;
+}
+
+/* Quatre étapes de même importance */
+#offres .offers-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  isolation: isolate;
+}
+
+#offres .offers-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  padding: 24px 22px;
+  background: var(--paper);
+}
+
+#offres .offers-step:nth-child(even) {
+  background: #e9dfe9;
+}
+
+#offres .offers-step-number {
+  padding: 0;
+  font-family: var(--sans) !important;
+  font-size: 32px !important;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #987da5;
+}
+
+#offres .offers-step h4 {
+  font-size: 22px !important;
+  line-height: 1.2;
+}
+
+#offres .offers-step p {
+  margin: 0;
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+/* Le badge reste visible sans dominer l’étape */
+#offres .offers-step-heading {
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#offres .offers-free {
+  padding: 6px 12px;
+  background: var(--coral);
+  font-size: 13px !important;
+}
+
+/* Deux fragments obliques suggèrent le mouvement */
+#offres .offers-step:not(:last-child)::before,
+#offres .offers-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  right: -31px;
+  width: 34px;
+  height: 52px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#offres .offers-step:not(:last-child)::before {
+  background: linear-gradient(
+    110deg,
+    rgba(232, 109, 85, 0),
+    rgba(232, 109, 85, 0.65)
+  );
+  clip-path: polygon(0 0, 65% 14%, 100% 50%, 28% 65%);
+  transform: rotate(-8deg);
+}
+
+#offres .offers-step:not(:last-child)::after {
+  top: 82px;
+  right: -37px;
+  background: linear-gradient(
+    110deg,
+    rgba(152, 125, 165, 0),
+    rgba(152, 125, 165, 0.65)
+  );
+  clip-path: polygon(28% 35%, 100% 50%, 65% 86%, 0 100%);
+  transform: rotate(-8deg);
+}
+
+/* De légères variations évitent un motif trop mécanique */
+#offres .offers-step:nth-child(2)::before {
+  transform: translateY(8px) rotate(7deg);
+}
+
+#offres .offers-step:nth-child(2)::after {
+  transform: translateY(3px) rotate(7deg);
+}
+
+#offres .offers-step:nth-child(3)::before {
+  transform: rotate(-14deg) scaleX(1.08);
+}
+
+#offres .offers-step:nth-child(3)::after {
+  transform: rotate(3deg) scaleX(1.08);
+}
+
+/* Formules : contours nets et hiérarchie plus affirmée */
+#offres .offers-packages-heading {
+  margin-top: 38px;
+}
+
+#offres .offer-card {
+  border-radius: 0;
+  background: var(--paper);
+}
+
+#offres .offer-card h4 {
+  font-size: 28px !important;
+}
+
+#offres .offer-price > span {
+  font-size: 26px !important;
+}
+
+#offres .offer-card-featured {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+#offres .offer-card-featured .offer-purpose {
+  color: var(--lilac);
+}
+
+#offres .offer-card-featured .offer-price {
+  border-top-color: rgba(245, 240, 233, 0.3);
+}
+
+/* Écrans intermédiaires : lecture verticale */
+@media (max-width: 1100px) {
+  #offres .offers-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  #offres .offers-step {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 18px;
+    padding: 24px;
+  }
+
+  #offres .offers-step:not(:last-child)::before,
+  #offres .offers-step:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    left: 45px;
+    bottom: -31px;
+    width: 34px;
+    height: 44px;
+    transform: rotate(90deg);
+  }
+
+  #offres .offers-step:not(:last-child)::after {
+    left: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  #offres .offers-step {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 14px;
+    padding: 22px 18px;
+  }
+
+  #offres .offers-step-number {
+    font-size: 26px !important;
+  }
+
+  #offres .offers-step:not(:last-child)::before {
+    left: 30px;
+  }
+
+  #offres .offers-step:not(:last-child)::after {
+    left: 45px;
+  }
+}

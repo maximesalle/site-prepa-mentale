@@ -2551,3 +2551,114 @@ html {
 #contact .contact-copy, #contact .contact-bilan, #contact .contact-form {
   margin-top: 0 !important;
 }
+
+/* Intro : titre compact et bénéfices lisibles */
+
+.split-hero {
+  height: auto;
+  min-height: min(700px, calc(100svh - 78px));
+}
+
+.split-hero .hero-copy {
+  min-width: 0;
+  padding: 40px clamp(24px, 3vw, 48px);
+}
+
+.split-hero h1 {
+  max-width: none;
+  font-size: clamp(30px, 2.5vw, 44px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  margin-bottom: 22px;
+  text-wrap: balance;
+}
+
+.split-hero .hero-copy > p.hero-introduction {
+  margin: 0 0 18px;
+  font-size: 15px !important;
+  line-height: 1.5;
+}
+
+.split-hero .hero-benefits {
+  display: grid;
+  gap: 12px;
+  max-width: 540px;
+  margin: 0 0 22px;
+  padding-left: 18px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.split-hero .hero-benefits li {
+  padding-left: 5px;
+}
+
+.split-hero .hero-benefits li::marker {
+  color: var(--coral);
+}
+
+.split-hero .hero-copy > p.hero-location {
+  margin: 0 0 18px;
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.split-hero .hero-copy > p.hero-reassurance,
+.split-hero .hero-reassurance-mobile {
+  margin: 9px 0 0;
+  font-family: var(--sans);
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.split-hero .hero-reassurance-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .split-hero {
+    min-height: 0;
+  }
+
+  .split-hero .hero-copy {
+    padding: 28px 23px 16px;
+  }
+
+  .split-hero h1 {
+    font-size: 30px !important;
+    margin-bottom: 18px;
+  }
+
+  .split-hero h1 br {
+    display: none;
+  }
+
+  .split-hero .hero-benefits {
+    gap: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .split-hero .hero-copy > p.hero-location {
+    margin-bottom: 0;
+  }
+
+  .split-hero .hero-copy > p.hero-reassurance {
+    display: none;
+  }
+
+  .split-hero .hero-cta-mobile {
+    margin: 18px 23px 0;
+  }
+
+  .split-hero .hero-reassurance-mobile {
+    display: block;
+    order: 4;
+    margin: 9px 23px 24px;
+  }
+}

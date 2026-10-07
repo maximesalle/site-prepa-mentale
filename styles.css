@@ -2883,3 +2883,184 @@ padding: 0;
     font-size: 14px !important;
   }
 }
+
+/* MON ACCOMPAGNEMENT — textes autour du portrait */
+
+#mon-accompagnement {
+  display: block;
+  padding: 42px clamp(24px, 5vw, 80px) 48px;
+  background: #ede4e7;
+  color: var(--ink);
+}
+
+#mon-accompagnement .opening-label {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+#mon-accompagnement .accompagnement-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.8fr)
+    minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 3vw, 48px);
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#mon-accompagnement .accompagnement-layout h2 {
+  margin: 0 0 18px;
+  font-family: var(--serif) !important;
+  font-size: 30px !important;
+  font-weight: 500 !important;
+  line-height: 1.15;
+  letter-spacing: 0 !important;
+}
+
+#mon-accompagnement .accompagnement-layout p {
+  margin: 0 0 15px;
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+#mon-accompagnement .accompagnement-layout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Portrait central et cadre corail décalé */
+#mon-accompagnement .accompagnement-photo {
+  position: relative;
+  isolation: isolate;
+  margin: 38px 8px 8px 0;
+}
+
+#mon-accompagnement .accompagnement-photo::before {
+  content: "";
+  position: absolute;
+  inset: 12px -12px -12px 12px;
+  border: 2px solid var(--coral);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#mon-accompagnement .accompagnement-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Conviction : un niveau de lecture distinct */
+#mon-accompagnement p.accompagnement-conviction {
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+/* Bénéfice final */
+#mon-accompagnement p.accompagnement-benefit {
+  margin-top: 22px;
+  padding-left: 15px;
+  border-left: 2px solid var(--coral);
+}
+
+/* Surlignage irrégulier : seul le trait est incliné */
+#mon-accompagnement .mental-highlight {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  color: inherit;
+}
+
+#mon-accompagnement .mental-highlight::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -5px;
+  bottom: 0.06em;
+  height: 0.65em;
+  background: #dfff00;
+  transform: rotate(-3deg);
+  clip-path: polygon(
+    0 18%, 12% 6%, 40% 13%, 73% 0,
+    100% 12%, 98% 84%, 65% 100%,
+    30% 88%, 2% 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+#mon-accompagnement
+.accompagnement-approach .mental-highlight::before {
+  transform: rotate(2deg);
+}
+
+/* Tablette et mobile : photo, histoire, approche */
+@media (max-width: 1000px) {
+  #mon-accompagnement .accompagnement-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    max-width: 620px;
+  }
+
+  #mon-accompagnement .accompagnement-photo {
+    grid-row: 1;
+    width: min(70%, 280px);
+    justify-self: center;
+    margin: 0 12px 12px 0;
+  }
+
+  #mon-accompagnement .accompagnement-story {
+    grid-row: 2;
+  }
+
+  #mon-accompagnement .accompagnement-approach {
+    grid-row: 3;
+  }
+
+  #mon-accompagnement .accompagnement-photo img {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 700px) {
+  #mon-accompagnement {
+    padding: 32px 23px 38px;
+  }
+
+  #mon-accompagnement .opening-label {
+    margin-bottom: 24px;
+  }
+
+  #mon-accompagnement .accompagnement-layout h2 {
+    font-size: 28px !important;
+    margin-bottom: 15px;
+  }
+
+  #mon-accompagnement .accompagnement-layout p {
+    font-size: 15px !important;
+    line-height: 1.6;
+  }
+
+  #mon-accompagnement p.accompagnement-conviction {
+    font-size: 22px !important;
+  }
+}

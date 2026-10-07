@@ -120,3 +120,29 @@ markCurrentSection();
   mobile.addEventListener('change', positionPanel);
   positionPanel();
 })();
+
+// Préselection du format depuis les cartes.
+(() => {
+  const formatSelect = document.querySelector('#contact-format');
+  const form = document.querySelector('#contact-form');
+  if (!formatSelect || !form) return;
+
+  document.querySelectorAll('a[href^="#contact?formule="]')
+    .forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const params = new URLSearchParams(
+          link.getAttribute('href').split('?')[1]
+        );
+
+        formatSelect.value = params.get('formule') || '';
+        location.hash = 'contact';
+      });
+    });
+
+  // Bloque l’envoi tant que le service n’est pas connecté.
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  });
+})();

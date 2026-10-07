@@ -3064,3 +3064,72 @@ padding: 0;
     font-size: 22px !important;
   }
 }
+/* Mon accompagnement : approche à gauche, portrait sans cadre */
+
+#mon-accompagnement .accompagnement-approach {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#mon-accompagnement .accompagnement-photo {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 28px 0 0;
+}
+
+#mon-accompagnement .accompagnement-story {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#mon-accompagnement .accompagnement-photo::before {
+  content: none;
+}
+
+/* Conviction dans le même paragraphe, sans espace supplémentaire */
+#mon-accompagnement .approach-opening {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  color: #806b87;
+}
+
+/* Surlignage qui accepte les retours à la ligne */
+#mon-accompagnement .mental-highlight {
+  display: inline;
+  white-space: normal;
+  background-image: linear-gradient(#dfff00, #dfff00);
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 0.55em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+#mon-accompagnement .mental-highlight::before {
+  content: none;
+}
+
+/* Écrans étroits : photo, approche, présentation */
+@media (max-width: 1000px) {
+  #mon-accompagnement .accompagnement-photo {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  #mon-accompagnement .accompagnement-approach {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #mon-accompagnement .accompagnement-story {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}

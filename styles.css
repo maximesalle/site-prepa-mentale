@@ -3020,3 +3020,86 @@ html {
     transform: none;
   }
 }
+
+/* Titres corail, sans fond derrière le texte */
+#offres .offer-card .offer-card-title {
+  position: static;
+  transform: none;
+  max-width: none;
+  padding: 0;
+  margin: 0 0 8px;
+  background: transparent;
+  color: var(--coral);
+}
+
+#offres .offer-card {
+  padding-top: 22px;
+}
+
+#offres .offers-packages-heading {
+  margin-bottom: 20px;
+}
+
+/* Nombre de séances, puis prix */
+#offres .offer-session-count {
+  margin: 0 0 8px;
+}
+
+#offres .offer-card .offer-price {
+  padding-top: 10px;
+}
+
+/* Mention de lancement directement sous le prix */
+#offres .offer-promo-note {
+  margin: 8px 0 14px;
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
+#offres .offer-promo-note > span {
+  display: block;
+  margin-bottom: 3px;
+  color: #715f76;
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+#offres .offer-card-featured .offer-promo-note > span {
+  color: var(--offers-fluo, #dfff00);
+}
+
+/* Suivi dans la durée : texte et bouton dans le même bloc */
+#offres .offers-continuous {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid rgba(48, 38, 49, 0.18);
+}
+
+#offres .offers-continuous h4 {
+  margin-bottom: 8px;
+}
+
+#offres .offers-continuous p {
+  max-width: 760px;
+  margin: 0;
+}
+
+#offres .offers-continuous .button {
+  justify-content: center;
+  gap: 0;
+}
+
+@media (max-width: 700px) {
+  #offres .offers-continuous {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  #offres .offers-continuous .button {
+    justify-self: start;
+  }
+}

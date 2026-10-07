@@ -3241,3 +3241,33 @@ html {
   text-transform: none;
   letter-spacing: normal;
 }
+
+/* Titres à l’intérieur des cartes */
+#offres .offer-card .offer-card-title {
+  position: static;
+  transform: none;
+  max-width: none;
+  margin: 0 0 8px;
+  padding: 0;
+  background: transparent;
+}
+
+#offres .offer-card {
+  padding-top: 26px;
+}
+
+/* Mention rapprochée du prix */
+#offres .offer-card .offer-promo-note {
+  margin-top: 2px;
+}
+
+#offres .offer-card .offer-promo-note > span {
+  margin-bottom: 3px;
+  color: var(--coral);
+  line-height: 1.25;
+}
+
+/* Même citron que le prix du Parcours */
+#offres .offer-card-featured .offer-promo-note > span {
+  color: var(--offers-fluo, #dfff00);
+}

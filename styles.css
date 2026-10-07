@@ -3271,3 +3271,45 @@ html {
 #offres .offer-card-featured .offer-promo-note > span {
   color: var(--offers-fluo, #dfff00);
 }
+
+/* Suivi dans la durée : une quatrième proposition visible */
+#offres .offers-continuous {
+  margin-top: 28px;
+  padding: 26px;
+  background: var(--lilac);
+  border: 0;
+  border-left: 4px solid var(--coral);
+}
+
+#offres .offers-continuous h4 {
+  margin-bottom: 8px;
+  font-family: var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+#offres .offers-continuous p {
+  max-width: 680px;
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+#offres .offers-continuous .button {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+#offres .offers-continuous .button:hover {
+  background: #493b4b;
+}
+
+@media (max-width: 700px) {
+  #offres .offers-continuous {
+    padding: 22px;
+  }
+
+  #offres .offers-continuous h4 {
+    font-size: 25px !important;
+  }
+}

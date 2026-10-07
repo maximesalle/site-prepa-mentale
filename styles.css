@@ -3519,3 +3519,45 @@ html {
     width: 100%;
   }
 }
+
+/* Contact : bloc bilan sans introduction supplémentaire */
+#contact .contact-bilan {
+  margin-top: 0;
+  padding: 24px;
+  background: #ede4e7;
+}
+
+#contact .contact-bilan h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif) !important;
+  font-size: 28px !important;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+#contact .contact-bilan p {
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+#contact .contact-bilan .contact-reassurance {
+  margin-top: 14px;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+#contact .contact-free {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 700px) {
+  #contact .contact-bilan {
+    padding: 22px;
+  }
+
+  #contact .contact-bilan h2 {
+    font-size: 25px !important;
+  }
+}

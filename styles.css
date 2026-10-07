@@ -3103,3 +3103,111 @@ html {
     justify-self: start;
   }
 }
+
+/* Formules : titres sur le bord et pastilles de lancement */
+
+#offres .offers-packages-heading {
+  margin-bottom: 44px;
+}
+
+#offres .offers-launch-limit {
+  margin: 0 0 6px;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+/* Espace entre les cartes et autour des pastilles */
+#offres .offers-packages {
+  gap: 28px;
+}
+
+#offres .offer-card {
+  position: relative;
+  overflow: visible;
+  padding: 36px 22px 22px;
+}
+
+/* Titres à mi-hauteur du bord supérieur */
+#offres .offer-card .offer-card-title {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  max-width: calc(100% - 92px);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 7px;
+  background: var(--paper);
+  color: var(--coral);
+  font-family: var(--serif) !important;
+  font-size: clamp(22px, 2vw, 28px) !important;
+  line-height: 1.15;
+}
+
+/* Le fond masque uniquement la bordure derrière le titre */
+#offres .offer-card-featured .offer-card-title {
+  background: var(--ink);
+  color: var(--coral);
+}
+
+/* Pastille ronde, légèrement inclinée */
+#offres .offer-sticker {
+  position: absolute;
+  top: -30px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--offers-fluo, #dfff00);
+  color: var(--ink);
+  font-family: var(--sans) !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+/* Prix et tarif suivant regroupés */
+#offres .offer-card .offer-launch-price {
+  font-size: 42px !important;
+}
+
+#offres .offer-card .offer-promo-note {
+  margin: 4px 0 16px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 13px !important;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  #offres .offers-packages {
+    gap: 42px;
+  }
+
+  #offres .offer-card {
+    padding-top: 34px;
+  }
+
+  #offres .offer-sticker {
+    top: -26px;
+    width: 60px;
+    height: 60px;
+    font-size: 10px !important;
+  }
+
+  #offres .offer-card .offer-card-title {
+    max-width: calc(100% - 82px);
+    font-size: 26px !important;
+  }
+}

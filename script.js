@@ -2,12 +2,12 @@
 const menuButton = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('#main-nav');
 
-menuButton.addEventListener('click', () => {
+menuButton?.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
 });
 
-mainNav.querySelectorAll('a').forEach((link) => {
+mainNav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
@@ -121,37 +121,28 @@ markCurrentSection();
   positionPanel();
 })();
 
-// Préselection du format depuis les cartes.
+// Préremplissage du format et navigation vers le contact.
 (() => {
   const formatSelect = document.querySelector('#contact-format');
   const form = document.querySelector('#contact-form');
-  if (!formatSelect || !form) return;
+  const contact = document.querySelector('#contact');
+  if (!formatSelect || !form || !contact) return;
 
-  document.querySelectorAll('a[href^="#contact?formule="]')
-    .forEach((link) => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        const params = new URLSearchParams(
-          link.getAttribute('href').split('?')[1]
-        );
-
-        formatSelect.value = params.get('formule') || '';
-
-history.replaceState(null, '', '#contact');
-window.dispatchEvent(new Event('hashchange'));
-
-document.querySelector('#contact').scrollIntoView({
-  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    ? 'auto'
-    : 'smooth',
-  block: 'start'
-});
+  document.querySelectorAll('a[data-formule]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      formatSelect.value = link.dataset.formule || '';
+      history.replaceState(null, '', '#contact');
+      window.dispatchEvent(new Event('hashchange'));
+      contact.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'auto'
+          : 'smooth',
+        block: 'start'
       });
     });
-
-  // Bloque l’envoi tant que le service n’est pas connecté.
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
   });
+
+  // L’envoi sera activé une fois le service de contact connecté.
+  form.addEventListener('submit', (event) => event.preventDefault());
 })();

@@ -137,7 +137,16 @@ markCurrentSection();
         );
 
         formatSelect.value = params.get('formule') || '';
-        location.hash = 'contact';
+
+history.replaceState(null, '', '#contact');
+window.dispatchEvent(new Event('hashchange'));
+
+document.querySelector('#contact').scrollIntoView({
+  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ? 'auto'
+    : 'smooth',
+  block: 'start'
+});
       });
     });
 

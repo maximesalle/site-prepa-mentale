@@ -408,21 +408,112 @@
   </a>
 </div>
 </section>
-      <section class="outro">
-        <p class="eyebrow">04 / LA SUITE</p>
-        <h2>Et si on partait<br>
-          <em>de votre situation ?</em>
-        </h2>
-        <div class="outro-bottom">
-          <p>Séance ciblée, travail sur un objectif précis ou accompagnement dans la durée : nous trouverons le format adapté à ce que vous souhaitez travailler.</p>
-          <div>
-            <a class="button coral" href="contact.html">Échangeons <span aria-hidden="true">↗</span>
-            </a>
-            <a class="text-link" href="offres.html">Découvrir les offres <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+      <section class="contact-section" id="contact"
+         aria-labelledby="contact-title">
+
+  <p class="eyebrow">04 / CONTACT</p>
+
+  <div class="contact-layout">
+
+    <div class="contact-copy">
+      <h2 id="contact-title">Parlons de ce qui<br>compte pour vous.</h2>
+
+      <p>
+        Un objectif, une difficulté ou une question :
+        quelques lignes suffisent pour commencer à échanger.
+      </p>
+
+      <div class="contact-bilan">
+        <span class="contact-free">Bilan offert</span>
+
+        <h3>Un premier rendez-vous pour faire le point</h3>
+
+        <p>
+          Pendant 45 minutes à 1 heure en visio, nous explorons
+          votre situation, vos objectifs et vos besoins.
+          Une restitution vous est partagée après le rendez-vous.
+        </p>
+
+        <p class="contact-reassurance">
+          Bilan et restitution offerts, sans engagement.
+        </p>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+
+      <div class="contact-field">
+        <label for="contact-message">Votre message</label>
+        <p class="contact-hint" id="contact-message-hint">
+          Qu’aimeriez-vous travailler ou me demander ?
+          Quelques lignes suffisent.
+        </p>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="5"
+          aria-describedby="contact-message-hint"
+          required
+        ></textarea>
+      </div>
+
+      <div class="contact-field">
+        <label for="contact-format">
+          Avez-vous une idée du format ?
+          <span class="contact-optional">Facultatif</span>
+        </label>
+
+        <select id="contact-format" name="format">
+          <option value="">Non, je souhaite en discuter</option>
+          <option value="seance-ciblee">Séance ciblée</option>
+          <option value="sprint">Sprint</option>
+          <option value="parcours">Parcours</option>
+          <option value="suivi-long-terme">Suivi long terme</option>
+        </select>
+      </div>
+
+      <div class="contact-details">
+        <div class="contact-field">
+          <label for="contact-name">Prénom</label>
+          <input
+            id="contact-name"
+            name="prenom"
+            type="text"
+            autocomplete="given-name"
+            required
+          >
         </div>
-      </section>
+
+        <div class="contact-field">
+          <label for="contact-email">Adresse e-mail</label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+      </div>
+
+      <p class="contact-privacy">
+        Vos informations seront utilisées pour répondre
+        à votre demande et organiser votre rendez-vous.
+      </p>
+
+      <button class="button coral contact-submit"
+              type="submit" disabled>
+        Envoyer et choisir mon créneau
+      </button>
+
+      <p class="contact-setup-note">
+        La réservation en ligne sera bientôt disponible.
+      </p>
+
+    </form>
+
+  </div>
+</section>
     </main>
     <footer>
       <span>Maxime Sallé © 2026</span>

@@ -3561,3 +3561,13 @@ html {
     font-size: 25px !important;
   }
 }
+
+#contact .contact-layout {
+  align-items: start;
+}
+
+#contact .contact-copy,
+#contact .contact-bilan,
+#contact .contact-form {
+  margin-top: 0 !important;
+}

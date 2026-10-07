@@ -3211,3 +3211,33 @@ html {
     font-size: 26px !important;
   }
 }
+
+/* Titres sans fond */
+#offres .offer-card .offer-card-title {
+  background: transparent;
+}
+
+/* Prix ciblée et Sprint en corail */
+#offres .offer-card:not(.offer-card-featured) .offer-launch-price {
+  color: var(--coral);
+}
+
+/* Mention des 10 inscriptions sous le prix */
+#offres .offer-card .offer-promo-note {
+  margin: 6px 0 14px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 13px !important;
+  line-height: 1.45;
+}
+
+#offres .offer-card .offer-promo-note > span {
+  display: block;
+  margin: 0 0 3px;
+  color: inherit;
+  font-size: 12px !important;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+}

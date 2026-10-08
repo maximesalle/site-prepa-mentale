@@ -3294,3 +3294,186 @@ padding: 0;
     margin-top: 0;
   }
 }
+/* Mon accompagnement — approche puis portrait */
+
+#mon-accompagnement.accompagnement-editorial {
+  --accomp-parme: #ede4e7;
+  --accomp-beige: #f5f0e9;
+  --accomp-ink: #302631;
+  --accomp-violet: #806b87;
+  --accomp-corail: #c45340;
+  --accomp-citron: #dfff00;
+
+  display: block;
+  background: var(--accomp-parme);
+  color: var(--accomp-ink);
+  padding: 40px clamp(24px, 5vw, 76px) 0;
+}
+
+#mon-accompagnement.accompagnement-editorial,
+#mon-accompagnement.accompagnement-editorial * {
+  box-sizing: border-box;
+}
+
+#mon-accompagnement.accompagnement-editorial > .eyebrow {
+  max-width: 1100px;
+  margin: 0 auto 22px;
+}
+
+#mon-accompagnement .accompagnement-conviction {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#mon-accompagnement .accompagnement-conviction h2 {
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: var(--accomp-violet);
+  margin: 0 0 10px;
+}
+
+#mon-accompagnement .accompagnement-statement {
+  font-family: "Fraunces", serif;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--accomp-ink);
+  max-width: 850px;
+  margin: 0 0 22px;
+}
+
+#mon-accompagnement .accompagnement-texts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+}
+
+#mon-accompagnement .accompagnement-texts p,
+#mon-accompagnement .accompagnement-bio p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+#mon-accompagnement .accompagnement-highlight {
+  background: linear-gradient(
+    transparent 58%,
+    var(--accomp-citron) 58%,
+    var(--accomp-citron) 92%,
+    transparent 92%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* La photo relie les deux fonds */
+#mon-accompagnement .accompagnement-personal {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 56px);
+  max-width: 1100px;
+  margin: 38px auto 0;
+  padding-bottom: 32px;
+}
+
+#mon-accompagnement .accompagnement-personal::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  bottom: 0;
+  left: calc(-1 * clamp(24px, 5vw, 76px));
+  right: calc(-1 * clamp(24px, 5vw, 76px));
+  background: var(--accomp-beige);
+}
+
+#mon-accompagnement .accompagnement-portrait {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#mon-accompagnement .accompagnement-portrait::before,
+#mon-accompagnement .accompagnement-portrait::after {
+  content: none;
+}
+
+#mon-accompagnement .accompagnement-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  transform: none;
+}
+
+#mon-accompagnement .accompagnement-bio {
+  min-width: 0;
+  padding-top: 48px;
+}
+
+#mon-accompagnement .accompagnement-bio h3 {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: var(--accomp-corail);
+  margin: 0 0 14px;
+}
+
+#mon-accompagnement .accompagnement-bio p + p {
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  #mon-accompagnement.accompagnement-editorial {
+    padding: 30px 24px 0;
+  }
+
+  #mon-accompagnement .accompagnement-texts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  #mon-accompagnement .accompagnement-personal {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    margin-top: 26px;
+    padding: 24px 0 30px;
+  }
+
+  #mon-accompagnement .accompagnement-personal::before {
+    top: 0;
+    left: -24px;
+    right: -24px;
+  }
+
+  #mon-accompagnement .accompagnement-portrait {
+    width: 160px;
+  }
+
+  #mon-accompagnement .accompagnement-bio {
+    padding-top: 0;
+  }
+}

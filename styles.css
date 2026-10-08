@@ -2727,3 +2727,34 @@ html {
   outline: 2px solid #51344f;
   outline-offset: 4px;
 }
+
+@media (max-width: 700px) {
+  /* Laisser l’introduction visible sous le bandeau */
+  #accueil {
+    scroll-margin-top: 68px;
+  }
+
+  #accueil .hero-copy {
+    padding-top: 32px;
+  }
+
+  /* Retirer les effets scotch et surlignage du numéro */
+  #situations .situation-panel::before,
+  #situations .situation-choice.is-selected .situation-number::before {
+    display: none;
+  }
+
+  /* Transformer l’étiquette de l’intro en titre simple */
+  #accueil .hero-method-label {
+    position: static;
+    transform: none;
+    max-width: none;
+    padding: 0;
+    margin: 0 0 14px;
+    background: transparent;
+  }
+
+  #accueil .hero-method {
+    padding-top: 20px;
+  }
+}

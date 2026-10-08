@@ -2783,10 +2783,44 @@ html {
     width: 170px;
   }
 }
+/* Qui je suis : panorama puis photo et parcours */
+
+#mon-accompagnement .accompagnement-panorama {
+  display: flex;
+  align-items: center;
+  min-height: 240px;
+  margin-top: 30px;
+  padding: 28px var(--accomp-gutter, 5vw);
+  background: #302631 url("images/piste-panoramique.png")
+    center / cover no-repeat;
+}
+
+#mon-accompagnement .accompagnement-panorama h3 {
+  margin: 0;
+  font-family: "Fraunces", serif !important;
+  font-size: clamp(30px, 3.5vw, 46px) !important;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #f5f0e9;
+}
+
+#mon-accompagnement .accompagnement-personal-band {
+  margin-top: 0;
+  padding: 28px var(--accomp-gutter, 5vw) 30px;
+  background: #f5f0e9;
+}
+
+#mon-accompagnement .accompagnement-personal {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+
 #mon-accompagnement .accompagnement-portrait {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 #mon-accompagnement .accompagnement-portrait img {
@@ -2795,4 +2829,36 @@ html {
   height: auto;
   aspect-ratio: auto;
   border-radius: 2px;
+}
+
+#mon-accompagnement .accompagnement-bio {
+  min-width: 0;
+  padding-top: 0;
+}
+
+#mon-accompagnement .accompagnement-bio p {
+  max-width: 740px;
+}
+
+@media (max-width: 700px) {
+  #mon-accompagnement .accompagnement-panorama {
+    min-height: 150px;
+    margin-top: 24px;
+    padding: 24px;
+    background-position: 60% center;
+  }
+
+  #mon-accompagnement .accompagnement-personal-band {
+    padding: 24px;
+  }
+
+  #mon-accompagnement .accompagnement-personal {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  #mon-accompagnement .accompagnement-portrait {
+    max-width: 360px;
+    margin-inline: auto;
+  }
 }

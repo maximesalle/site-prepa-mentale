@@ -4522,7 +4522,7 @@ html {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: -4px -6px;
+  inset: -4px -2px -4px -6px;
   background: #dfff00;
   transform: rotate(-7deg);
 }

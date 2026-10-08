@@ -4509,3 +4509,38 @@ html {
   margin: 0 var(--accomp-gutter, 5vw);
   background: rgba(81, 52, 79, 0.25);
 }
+/* Vos situations — deux accents citron */
+
+/* Numéro de la situation sélectionnée */
+#situations .situation-choice.is-selected .situation-number {
+  position: relative;
+  isolation: isolate;
+  color: #51344f;
+}
+
+#situations .situation-choice.is-selected .situation-number::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -4px -6px;
+  background: #dfff00;
+  transform: rotate(-7deg);
+}
+
+/* Surlignage discret de « Pour vous » */
+#situations .situation-outcome .situation-panel-label {
+  display: inline;
+  color: #51344f;
+  background: linear-gradient(
+    transparent 55%,
+    #dfff00 55%,
+    #dfff00 92%,
+    transparent 92%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+#situations #situation-outcome-text {
+  margin-top: 8px;
+}

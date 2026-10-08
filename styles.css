@@ -2698,3 +2698,32 @@ html {
   );
   pointer-events: none;
 }
+
+/* Accompagnement dans la durée */
+#offres .offers-continuous {
+  background: #51344f;
+  color: #f5f0e9;
+  border: 0;
+}
+
+#offres .offers-continuous h4 {
+  color: #f5f0e9;
+}
+
+#offres .offers-continuous p {
+  color: #e5dce2;
+}
+
+#offres .offers-continuous .button {
+  background: #dfff00;
+  color: #51344f;
+}
+
+#offres .offers-continuous .button:hover {
+  background: #ebff66;
+}
+
+#offres .offers-continuous .button:focus-visible {
+  outline: 2px solid #f5f0e9;
+  outline-offset: 4px;
+}

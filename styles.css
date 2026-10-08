@@ -1,14 +1,4 @@
-/* Site Maxime Sallé — styles conservés, variantes inutilisées retirées */
-
-:root {
-  --paper: #f5f0e9;
-  --ink: #302631;
-  --lilac: #c6b6cf;
-  --coral: #e86d55;
-  --apricot: #f2d9c6;
-  --serif: Fraunces,Georgia,serif;
-  --sans: "DM Sans",Arial,sans-serif;
-}
+/* Maxime Sallé — CSS consolidé. Les règles finales et responsive sont conservées. */
 
 * {
   box-sizing: border-box;
@@ -56,7 +46,6 @@ button {
 
 .site-header nav {
   display: flex;
-  gap: clamp(18px,2.6vw,42px);
   align-items: center;
 }
 
@@ -231,10 +220,6 @@ footer a {
     margin-bottom: 24px;
   }
 
-  .situations {
-    padding: 75px 23px;
-  }
-
   footer {
     display: block;
     padding: 30px 23px;
@@ -274,8 +259,6 @@ footer a {
 .wayfinder {
   display: grid;
   background: var(--paper);
-  border-bottom: 1px solid rgba(48,38,49,.24);
-  padding: 0 clamp(22px,5vw,80px);
 }
 
 .wayfinder>* {
@@ -292,10 +275,7 @@ footer a {
 }
 
 .wayfinder a {
-  gap: 8px;
-  text-decoration: none;
   font: 600 14px var(--sans);
-  transition: background .2s,padding .2s;
 }
 
 .wayfinder a:hover {
@@ -336,12 +316,7 @@ footer a {
     transform: none;
   }
 
-  .wayfinder {
-    padding: 0 23px;
-  }
-
   .wayfinder a {
-    padding: 14px 9px;
     border-top: 1px solid rgba(48,38,49,.22);
     font-size: 13px;
   }
@@ -367,10 +342,6 @@ footer a {
   }
 }
 
-.hero h1 {
-  max-width: 920px;
-}
-
 @media (max-width:700px) {
   .hero h1 {
     font-size: clamp(47px,10.6vw,70px);
@@ -378,6 +349,13 @@ footer a {
 }
 
 :root {
+  --paper: #f5f0e9;
+  --ink: #302631;
+  --lilac: #c6b6cf;
+  --coral: #e86d55;
+  --apricot: #f2d9c6;
+  --serif: Fraunces,Georgia,serif;
+  --sans: "DM Sans",Arial,sans-serif;
   --type-display: 64px;
   --type-heading: 30px;
   --type-text: 15px;
@@ -394,6 +372,7 @@ h1, h2, h3, .brand {
 }
 
 .hero h1 {
+  max-width: 920px;
   font-size: var(--type-display) !important;
   line-height: 1.08 !important;
   letter-spacing: -.015em !important;
@@ -428,10 +407,6 @@ h1, h2, h3, .brand {
 
 .site-header nav a {
   white-space: nowrap;
-}
-
-.wayfinder a {
-  gap: 6px;
 }
 
 .wayfinder a span {
@@ -480,8 +455,6 @@ h1, h2, h3, .brand {
 }
 
 .split-hero {
-  height: min(700px,calc(100svh - 78px));
-  min-height: 570px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--paper);
@@ -498,14 +471,9 @@ h1, h2, h3, .brand {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 55px clamp(30px,5vw,80px);
-  z-index: 1;
 }
 
 .split-hero h1 {
-  font-size: var(--type-display) !important;
-  line-height: 1.08 !important;
-  max-width: 600px;
   margin: 0 0 30px;
   color: var(--ink);
 }
@@ -541,7 +509,6 @@ h1, h2, h3, .brand {
   }
 
   .split-hero .hero-copy {
-    padding: 65px 23px 55px;
     order: 1;
   }
 
@@ -1270,10 +1237,6 @@ html {
   background: var(--paper);
 }
 
-#offres .offers-step:nth-child(even) {
-  background: #e9dfe9;
-}
-
 #offres .offers-step-number {
   padding: 0;
   font-family: var(--sans) !important;
@@ -1302,7 +1265,6 @@ html {
 
 #offres .offers-free {
   padding: 6px 12px;
-  background: var(--coral);
   font-size: 13px !important;
 }
 
@@ -1317,22 +1279,12 @@ html {
 }
 
 #offres .offers-step:not(:last-child)::before {
-  background: linear-gradient(
-    110deg,
-    rgba(232, 109, 85, 0),
-    rgba(232, 109, 85, 0.65)
-  );
   transform: rotate(-8deg);
 }
 
 #offres .offers-step:not(:last-child)::after {
   top: 82px;
   right: -37px;
-  background: linear-gradient(
-    110deg,
-    rgba(152, 125, 165, 0),
-    rgba(152, 125, 165, 0.65)
-  );
   transform: rotate(-8deg);
 }
 
@@ -1356,21 +1308,12 @@ html {
   margin-top: 38px;
 }
 
-#offres .offer-card {
-  border-radius: 0;
-  background: var(--paper);
-}
-
 #offres .offer-card h4 {
   font-size: 28px !important;
 }
 
 #offres .offer-price > span {
   font-size: 26px !important;
-}
-
-#offres .offer-card-featured {
-  background: var(--ink);
 }
 
 @media (max-width: 1100px) {
@@ -1415,52 +1358,20 @@ html {
   background: #edddd5;
 }
 
-#offres .offers-free {
-  background: var(--offers-fluo);
-  color: var(--ink);
-}
-
-#offres .offers-step:not(:last-child)::before {
-  background: linear-gradient(
-    100deg,
-    transparent 5%,
-    rgba(229, 245, 100, 0.95) 90%
-  );
-}
-
-#offres .offers-step:not(:last-child)::after {
-  background: linear-gradient(
-    100deg,
-    transparent,
-    rgba(232, 109, 85, 0.8)
-  );
-}
-
 #offres {
   --offers-fluo: #dfff00;
 }
 
 #offres .offers-free {
+  color: var(--ink);
   background: var(--offers-fluo);
 }
 
 #offres .offers-step:not(:last-child)::before {
-  background: linear-gradient(
-    105deg,
-    transparent 8%,
-    rgba(223, 255, 0, 0.35) 40%,
-    var(--offers-fluo) 95%
-  );
   clip-path: polygon(0 35%, 100% 0, 82% 30%, 8% 58%);
 }
 
 #offres .offers-step:not(:last-child)::after {
-  background: linear-gradient(
-    105deg,
-    transparent 5%,
-    rgba(232, 109, 85, 0.35) 45%,
-    rgba(232, 109, 85, 0.9) 95%
-  );
   clip-path: polygon(0 48%, 82% 68%, 100% 100%, 12% 72%);
 }
 
@@ -1577,33 +1488,8 @@ html {
   }
 }
 
-#offres .offers-packages-heading {
-  margin-bottom: 34px;
-}
-
 #offres .offers-packages-heading > p:last-child {
   margin: 0;
-}
-
-#offres .offers-packages {
-  gap: 22px;
-}
-
-#offres .offer-card {
-  padding: 30px 22px 22px;
-  border: 1px solid rgba(48, 38, 49, 0.25);
-  border-radius: 0;
-  background: var(--paper);
-}
-
-#offres .offer-card .offer-card-title {
-  margin: 0;
-  padding: 0 8px;
-  background: var(--paper);
-}
-
-#offres .offer-card .offer-purpose {
-  margin: 0 0 12px;
 }
 
 #offres .offer-price {
@@ -1621,23 +1507,7 @@ html {
   letter-spacing: -0.035em;
 }
 
-#offres .offer-session-count {
-  margin: 16px 0 7px;
-}
-
-#offres .offer-card-featured {
-  background: var(--ink);
-}
-
-#offres .offer-card-featured .offer-card-title {
-  background: var(--ink);
-}
-
 @media (max-width: 700px) {
-  #offres .offers-packages {
-    gap: 32px;
-  }
-
   #offres .offer-card {
     padding: 30px 22px 22px;
   }
@@ -1661,7 +1531,6 @@ html {
 #offres .offers-packages {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
   align-items: stretch;
 }
 
@@ -1669,7 +1538,6 @@ html {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 27px 22px 20px;
   border: 1px solid rgba(48, 38, 49, 0.25);
   border-radius: 0;
   background: var(--paper);
@@ -1677,9 +1545,6 @@ html {
 }
 
 #offres .offer-card .offer-card-title {
-  margin: 0;
-  padding: 0 8px;
-  background: var(--paper);
   font-weight: 500;
 }
 
@@ -1711,7 +1576,6 @@ html {
 }
 
 #offres .offer-session-count {
-  margin: 6px 0 14px;
   font-size: 13px !important;
   font-weight: 600;
   line-height: 1.4;
@@ -1795,10 +1659,6 @@ html {
   border-color: var(--ink);
 }
 
-#offres .offer-card-featured .offer-card-title {
-  background: var(--ink);
-}
-
 #offres .offer-card-featured .offer-purpose {
   color: var(--paper);
 }
@@ -1823,7 +1683,6 @@ html {
 @media (max-width: 700px) {
   #offres .offers-packages {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
   }
 
   #offres .offer-card .offer-purpose {
@@ -1839,20 +1698,6 @@ html {
   #offres .offer-cta:hover {
     transform: none;
   }
-}
-
-#offres .offer-card .offer-card-title {
-  padding: 0;
-  margin: 0 0 8px;
-  background: transparent;
-}
-
-#offres .offer-card {
-  padding-top: 22px;
-}
-
-#offres .offers-packages-heading {
-  margin-bottom: 20px;
 }
 
 #offres .offer-session-count {
@@ -1882,9 +1727,6 @@ html {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 24px;
-  padding: 24px;
-  background: var(--paper);
-  border: 1px solid rgba(48, 38, 49, 0.18);
 }
 
 #offres .offers-continuous p {
@@ -1924,9 +1766,6 @@ html {
 #offres .offer-card .offer-card-title {
   top: 0;
   left: 14px;
-  margin: 0;
-  padding: 0 7px;
-  background: var(--paper);
   color: var(--coral);
   font-family: var(--serif) !important;
   font-size: clamp(22px, 2vw, 28px) !important;
@@ -1967,9 +1806,6 @@ html {
 }
 
 #offres .offer-card .offer-promo-note {
-  margin: 4px 0 16px;
-  padding: 0;
-  background: transparent;
   font-weight: 400;
 }
 
@@ -1993,10 +1829,6 @@ html {
     max-width: calc(100% - 82px);
     font-size: 26px !important;
   }
-}
-
-#offres .offer-card .offer-card-title {
-  background: transparent;
 }
 
 #offres .offer-card:not(.offer-card-featured) .offer-launch-price {
@@ -2649,14 +2481,11 @@ html {
   }
 }
 
-/* Mon accompagnement : une seule composition, indépendante des anciens blocs */
-
 #mon-accompagnement.accompagnement-editorial {
   --accomp-gutter: clamp(22px, 5vw, 80px);
   display: block;
   padding: 38px 0 0;
   margin: 0;
-  background: #ede4e7;
   color: #302631;
 }
 
@@ -2672,13 +2501,9 @@ html {
 }
 
 #mon-accompagnement .accompagnement-conviction h2 {
-  font-family: var(--serif) !important;
-  font-size: 18px !important;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: normal;
-  color: #806b87;
-  margin: 0 0 10px;
 }
 
 #mon-accompagnement .accompagnement-statement {
@@ -2798,8 +2623,6 @@ html {
   }
 }
 
-/* Hiérarchie plus simple pour Mon approche */
-
 #mon-accompagnement .accompagnement-conviction h2 {
   font-family: var(--serif) !important;
   font-size: 28px !important;
@@ -2815,8 +2638,6 @@ html {
   color: #51344f;
 }
 
-/* Séparation entre Mon accompagnement et Vos situations */
-
 #mon-accompagnement.accompagnement-editorial {
   position: relative;
   padding-bottom: 20px;
@@ -2830,10 +2651,6 @@ html {
   margin: 0 var(--accomp-gutter, 5vw);
   background: rgba(81, 52, 79, 0.25);
 }
-
-/* Vos situations — deux accents citron */
-
-/* Numéro de la situation sélectionnée */
 
 #situations .situation-choice.is-selected .situation-number {
   position: relative;
@@ -2850,8 +2667,6 @@ html {
   transform: rotate(-7deg);
 }
 
-/* Libellé sobre : le scotch apporte déjà l’accent citron. */
-
 #situations .situation-outcome .situation-panel-label {
   display: inline;
   color: #51344f;
@@ -2861,8 +2676,6 @@ html {
 #situations #situation-outcome-text {
   margin-top: 8px;
 }
-
-/* Scotch citron sur le panneau de droite */
 
 #situations .situation-panel {
   position: relative;

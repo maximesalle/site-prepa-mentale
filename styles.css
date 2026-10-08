@@ -4494,3 +4494,18 @@ html {
   font-style: italic;
   color: #51344f;
 }
+
+/* Séparation entre Mon accompagnement et Vos situations */
+#mon-accompagnement.accompagnement-editorial {
+  position: relative;
+  padding-bottom: 20px;
+  background: #ede4e7;
+}
+
+#mon-accompagnement.accompagnement-editorial::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 var(--accomp-gutter, 5vw);
+  background: rgba(81, 52, 79, 0.25);
+}

@@ -4478,3 +4478,19 @@ html {
   #mon-accompagnement .accompagnement-portrait { width: 160px; }
   #mon-accompagnement .accompagnement-bio { padding-top: 0; }
 }
+
+/* Hiérarchie plus simple pour Mon approche */
+#mon-accompagnement .accompagnement-conviction h2 {
+  font-family: var(--serif) !important;
+  font-size: 28px !important;
+  color: #302631;
+  margin: 0 0 16px;
+}
+
+#mon-accompagnement .accompagnement-opening {
+  font-family: var(--sans) !important;
+  font-size: inherit !important;
+  font-weight: 400;
+  font-style: italic;
+  color: #60465f;
+}

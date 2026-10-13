@@ -2774,12 +2774,12 @@ html {
 
 .site-header .brand img {
   display: block;
-  width: 220px;
+  width: 165px;
   height: auto;
 }
 
 @media (max-width: 700px) {
   .site-header .brand img {
-    width: 170px;
+    width: 130px;
   }
 }

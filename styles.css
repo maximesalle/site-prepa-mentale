@@ -3268,77 +3268,49 @@ html {
   }
 }
 
-
-  
-/* MON ACCOMPAGNEMENT — AJUSTEMENTS MOBILE */
+/* MON ACCOMPAGNEMENT — MOBILE */
 
 @media (max-width: 700px) {
 
-  /* 1. Raccourcir la photo de fond */
+  /* Bandeau photo et texte */
   .accompagnement-immersif .accompagnement-scene {
-    min-height: 340px;
-    padding: 28px 24px 140px;
+    min-height: 0;
+    padding: 28px 24px 165px;
     background:
       linear-gradient(
         180deg,
-        rgba(25, 20, 24, 0.80),
-        rgba(25, 20, 24, 0.05) 85%
+        rgba(25, 20, 24, 0.88),
+        rgba(25, 20, 24, 0.65) 55%,
+        rgba(25, 20, 24, 0.10) 100%
       ),
       url("images/bandeau-accompagnement.png")
       78% bottom / cover no-repeat;
   }
 
-  /* 2. Paragraphe entre les deux photos */
+  /* Texte Chacun possède en lui */
   .accompagnement-immersif .accompagnement-conviction {
     display: block;
     margin: 0;
-    padding: 28px 24px 0;
-    background: #f5f0e9;
-    color: #302631;
-    font-size: 15px !important;
-    line-height: 1.65;
+    padding: 0;
+    background: transparent;
+    color: #f5f0e9;
   }
 
-  /* 3. Rapprocher le portrait du paragraphe */
-  .accompagnement-immersif .accompagnement-rencontre {
-    padding-top: 28px;
+  /* Texte J'ai travaillé dix ans avant le portrait */
+  .accompagnement-immersif .accompagnement-recit {
+    order: 1;
   }
 
-  /* 4. Décaler la citation vers la droite */
+  .accompagnement-immersif .accompagnement-photo {
+    order: 2;
+  }
+
   .accompagnement-immersif .accompagnement-signature {
+    order: 3;
     justify-self: end;
     margin-left: auto;
     margin-right: 8px;
-    padding-right: 26px;
   }
 }
 
-
-
-
-/* Ajustement final : conviction dans le bandeau sur ordinateur,
-   entre le bandeau et le portrait sur mobile. */
-.accompagnement-immersif .conviction-desktop {
-  display: block;
-  margin: 0 !important;
-  color: #f5f0e9;
-}
-.accompagnement-immersif .conviction-mobile {
-  display: none;
-}
-@media (max-width: 700px) {
-  .accompagnement-immersif .conviction-desktop {
-    display: none;
-  }
-  .accompagnement-immersif .conviction-mobile {
-    display: block;
-    margin: 0 !important;
-    padding: 28px 24px 0;
-    background: #f5f0e9;
-    color: #302631;
-  }
-  /* Le récit précède le portrait, sans superposition. */
-  .accompagnement-immersif .accompagnement-recit { order: 1; }
-  .accompagnement-immersif .accompagnement-photo { order: 2; }
-  .accompagnement-immersif .accompagnement-signature { order: 3; }
-}
+  

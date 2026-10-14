@@ -3076,13 +3076,13 @@ html {
   display: inline-block;
   margin-top: 10px;
   padding: 5px 9px;
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "Fraunces", serif !important;
+font-weight: 600 !important;
+font-style: normal;
+letter-spacing: normal;
+text-transform: none;
   font-size: clamp(32px, 3vw, 46px) !important;
-  font-weight: 700 !important;
-  font-style: normal;
   line-height: 1.05;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
   white-space: nowrap;
   color: #51344f !important;
   background: #dfff00;

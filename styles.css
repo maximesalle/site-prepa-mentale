@@ -3313,4 +3313,21 @@ html {
   }
 }
 
+@media (max-width: 700px) {
+  .accompagnement-immersif .accompagnement-scene {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(25, 20, 24, 0.80),
+        rgba(25, 20, 24, 0.25)
+      ),
+      url("images/bandeau-accompagnement.png")
+      center / cover no-repeat !important;
+  }
+
+  .accompagnement-immersif .accompagnement-conviction {
+    background: transparent !important;
+    color: #f5f0e9 !important;
+  }
+}
   

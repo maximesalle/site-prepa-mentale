@@ -38,44 +38,66 @@ markCurrentSection();
   if (!panel || !buttons.length) return;
   const mobile = window.matchMedia("(max-width: 700px)");
 
-  const situations = [
-    {
-      description:
-        "Vous avez préparé votre compétition, votre oral ou votre présentation. Pourtant, la pression prend le dessus et vous empêche de montrer ce dont vous êtes capable.",
-      tools:
-        "Réguler les émotions, renforcer la concentration et créer des repères pour les moments décisifs.",
-      outcome: "Aborder ces moments avec plus de sérénité et de confiance.",
-    },
-    {
-      description:
-        "Reprendre le sport, commencer les révisions, lancer un projet : vous en avez envie, mais vous repoussez. La frustration et la culpabilité s’installent.",
-      tools:
-        "Comprendre vos freins, identifier vos leviers de motivation et construire des habitudes qui facilitent le démarrage.",
-      outcome: "Passer à l’action plus facilement et tenir dans la durée.",
-    },
-    {
-      description:
-        "Prendre la parole en réunion, vous présenter à un entretien, participer à une compétition : vous doutez de votre légitimité et vous comparez, même quand vous réussissez.",
-      tools:
-        "Reconnaître vos forces, comprendre votre fonctionnement et développer un dialogue intérieur plus constructif.",
-      outcome:
-        "Faire davantage confiance à vos capacités et oser prendre votre place.",
-    },
-    {
-      description:
-        "Une compétition décevante, un examen raté ou une blessure vous a déstabilisé. Vous repensez à ce qui s’est passé et craignez de revivre la même difficulté.",
-      tools:
-        "Accueillir les émotions, prendre du recul et reconstruire des repères pour la suite.",
-      outcome: "Retrouver de la confiance et l’envie d’avancer.",
-    },
-    {
-      description:
-        "Au travail, dans vos études ou à l’entraînement, vous attendez beaucoup de vous-même et cherchez toujours à faire mieux. Vous avez du mal à faire une pause sans culpabiliser.",
-      tools:
-        "Clarifier ce qui compte pour vous, ajuster vos exigences et donner une place à la récupération et au plaisir.",
-      outcome: "Poursuivre vos ambitions tout en préservant votre équilibre.",
-    },
-  ];
+  
+const situations = [
+  {
+    description:
+      "Vous avez préparé votre compétition, votre oral ou votre présentation. Pourtant, la pression prend le dessus et vous empêche de montrer ce dont vous êtes capable.",
+    tools:
+      "Réguler les émotions, renforcer la concentration et créer des repères pour les moments décisifs.",
+    outcome:
+      "Aborder mes échéances avec confiance et plaisir.",
+  },
+  {
+    description:
+      "Reprendre le sport, commencer les révisions, lancer un projet : vous en avez envie, mais vous repoussez. La frustration et la culpabilité s'installent.",
+    tools:
+      "Comprendre vos freins, identifier vos leviers de motivation et construire des habitudes qui facilitent le démarrage.",
+    outcome:
+      "Retrouver l'élan et le plaisir de passer à l'action.",
+  },
+  {
+    description:
+      "Prendre la parole en réunion, vous présenter à un entretien, participer à une compétition : vous doutez de votre légitimité et vous comparez, même quand vous réussissez.",
+    tools:
+      "Reconnaître vos forces, comprendre votre fonctionnement et développer un dialogue intérieur plus constructif.",
+    outcome:
+      "Davantage de confiance pour oser davantage.",
+  },
+  {
+    description:
+      "Une compétition décevante, un examen raté ou une blessure vous a déstabilisé. Vous repensez à ce qui s'est passé et craignez de revivre la même difficulté.",
+    tools:
+      "Accueillir les émotions, prendre du recul et reconstruire des repères pour la suite.",
+    outcome:
+      "Apprendre de mes expériences pour rebondir avec confiance.",
+  },
+  {
+    description:
+      "Au travail, dans vos études ou à l'entraînement, vous attendez beaucoup de vous-même et cherchez toujours à faire mieux. Vous avez du mal à faire une pause sans culpabiliser.",
+    tools:
+      "Clarifier ce qui compte pour vous, ajuster vos exigences et donner une place à la récupération et au plaisir.",
+    outcome:
+      "Trouver le juste équilibre entre exigence et plaisir.",
+  },
+  {
+    description:
+      "Une remarque, une contrariété ou un imprévu peut parfois provoquer une réaction émotionnelle intense. Vous aimeriez prendre davantage de recul sans avoir à réprimer ce que vous ressentez.",
+    tools:
+      "Identifier les points déclencheurs, comprendre vos réactions et expérimenter des stratégies de régulation émotionnelle adaptées.",
+    outcome:
+      "Mieux comprendre mes émotions pour les vivre sereinement.",
+  },
+  {
+    description:
+      "Un nouveau défi sportif, un projet personnel ou une ambition professionnelle : vous avez envie de progresser et d'explorer vos capacités, même sans difficulté particulière à surmonter.",
+    tools:
+      "Clarifier vos objectifs, identifier vos ressources, entraîner votre concentration et construire des routines qui soutiennent votre progression.",
+    outcome:
+      "Mobiliser mes ressources pour progresser et me dépasser.",
+  },
+];
+
   let selected = 0;
 
   function positionPanel() {

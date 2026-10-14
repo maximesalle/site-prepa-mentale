@@ -3102,7 +3102,7 @@ html {
   }
 }
 
-/* Transition entre situations et offres */
+/* Bandeau : dégradé coloré, texte sur une ligne */
 
 .elan-banner {
   position: relative;
@@ -3110,74 +3110,83 @@ html {
   overflow: hidden;
   display: grid;
   place-items: center;
-  min-height: 200px;
-  padding: 36px 24px;
-  background: #ddd0e8;
+  min-height: 190px;
+  padding: 32px 24px;
+  background: #c6b6cf;
 }
 
 .elan-banner::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: -25%;
- background:
-  radial-gradient(
-    ellipse at 8% 80%,
-    rgba(81, 52, 79, 0.28),
-    transparent 48%
-  ),
-  radial-gradient(
-    ellipse at 82% 20%,
-    rgba(232, 109, 85, 0.3),
-    transparent 45%
-  ),
-  radial-gradient(
-    ellipse at 95% 85%,
-    rgba(223, 255, 0, 0.2),
-    transparent 32%
-  ),
-  linear-gradient(
-    115deg,
-    #c6b6cf,
-    #e6dce9 55%,
-    #f5f0e9
-  );
+  inset: -20%;
+  background:
+    radial-gradient(
+      ellipse at 10% 75%,
+      rgba(81, 52, 79, 0.48),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 85% 25%,
+      rgba(232, 109, 85, 0.55),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 65% 90%,
+      rgba(245, 240, 233, 0.85),
+      transparent 45%
+    ),
+    linear-gradient(115deg, #ad93c1, #d8c8e5);
   animation: elan-gradient 12s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
-.elan-banner p {
-  margin: 0;
-  text-align: center;
-  text-wrap: balance;
+.elan-banner::after {
+  content: none;
 }
-.elan-banner em {
+
+.elan-banner p,
+.elan-banner p em {
   font-family: "Fraunces", serif !important;
-  font-size: clamp(28px, 3.2vw, 44px) !important;
-  font-weight: 400;
+  font-size: clamp(26px, 2.8vw, 44px) !important;
+  font-weight: 400 !important;
   line-height: 1.2;
   letter-spacing: normal;
-  color: #51344f;
+  color: #302631 !important;
 }
 
 .elan-banner p {
-  display: inline;
   margin: 0;
-  font-style: italic;
+  font-style: normal !important;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.elan-banner em {
-  display: block;
-  margin-top: 6px;
-  font-style: italic;
+.elan-banner p em {
+  display: inline !important;
+  margin: 0;
+  font-style: italic !important;
 }
 
 @keyframes elan-gradient {
-  from {
-    transform: translateX(-3%) rotate(-2deg);
+  from { transform: translateX(-3%); }
+  to   { transform: translateX(3%); }
+}
+
+@media (max-width: 900px) {
+  .elan-banner {
+    min-height: 170px;
   }
-  to {
-    transform: translateX(3%) rotate(2deg);
+
+  .elan-banner p {
+    white-space: normal;
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elan-banner::before {
+    animation: none;
   }
 }
 

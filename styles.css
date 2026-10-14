@@ -3276,26 +3276,32 @@ html {
 }
 
 /* MON ACCOMPAGNEMENT — MOBILE */
-
 @media (max-width: 700px) {
-
-  /* Bandeau photo et texte */
-  .accompagnement-immersif .accompagnement-scene {
+  #mon-accompagnement .accompagnement-scene {
+    display: block;
     min-height: 0;
-    padding: 28px 24px 165px;
-    background:
+    padding: 30px 24px 135px;
+    background-image:
       linear-gradient(
         180deg,
-        rgba(25, 20, 24, 0.88),
-        rgba(25, 20, 24, 0.65) 55%,
-        rgba(25, 20, 24, 0.10) 100%
+        rgba(25, 20, 24, 0.87) 0%,
+        rgba(25, 20, 24, 0.68) 58%,
+        rgba(25, 20, 24, 0.12) 100%
       ),
-      url("images/bandeau-accompagnement.png")
-      78% bottom / cover no-repeat;
+      url("images/bandeau-accompagnement.png");
+    background-position: center, 78% bottom;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
   }
 
-  /* Texte Chacun possède en lui */
-  .accompagnement-immersif .accompagnement-conviction {
+  #mon-accompagnement .accompagnement-scene-copy {
+    display: block;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+  }
+
+  #mon-accompagnement .accompagnement-scene-copy .accompagnement-conviction {
     display: block;
     margin: 0;
     padding: 0;
@@ -3303,43 +3309,27 @@ html {
     color: #f5f0e9;
   }
 
-  /* Texte J'ai travaillé dix ans avant le portrait */
-  .accompagnement-immersif .accompagnement-recit {
+  #mon-accompagnement .accompagnement-rencontre {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #mon-accompagnement .accompagnement-recit {
     order: 1;
   }
 
-  .accompagnement-immersif .accompagnement-photo {
+  #mon-accompagnement .accompagnement-photo {
     order: 2;
   }
 
-  .accompagnement-immersif .accompagnement-signature {
+  #mon-accompagnement .accompagnement-signature {
     order: 3;
-    justify-self: end;
-    margin-left: auto;
-    margin-right: 8px;
+    align-self: flex-end;
   }
 }
 
-@media (max-width: 700px) {
-  .accompagnement-immersif .accompagnement-scene {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(25, 20, 24, 0.80),
-        rgba(25, 20, 24, 0.25)
-      ),
-      url("images/bandeau-accompagnement.png")
-      center / cover no-repeat !important;
-  }
-
-  .accompagnement-immersif .accompagnement-conviction {
-    background: transparent !important;
-    color: #f5f0e9 !important;
-  }
-}
-  
-
-/* Correctif mobile : phrase d'information sous le CTA */
+/* Phrase sous le bouton — mobile */
 @media (max-width: 700px) {
   #accueil .hero-reassurance-mobile {
     display: block;

@@ -3120,23 +3120,37 @@ html {
   position: absolute;
   z-index: -1;
   inset: -25%;
-  background:
-    radial-gradient(
-      ellipse at 85% 60%,
-      rgba(223, 255, 0, 0.35),
-      transparent 35%
-    ),
-    linear-gradient(
-      115deg,
-      #ad93c1 10%,
-      #d8c8e5 48%,
-      #f5f0e9 90%
-    );
+ background:
+  radial-gradient(
+    ellipse at 8% 80%,
+    rgba(81, 52, 79, 0.28),
+    transparent 48%
+  ),
+  radial-gradient(
+    ellipse at 82% 20%,
+    rgba(232, 109, 85, 0.3),
+    transparent 45%
+  ),
+  radial-gradient(
+    ellipse at 95% 85%,
+    rgba(223, 255, 0, 0.2),
+    transparent 32%
+  ),
+  linear-gradient(
+    115deg,
+    #c6b6cf,
+    #e6dce9 55%,
+    #f5f0e9
+  );
   animation: elan-gradient 12s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
-.elan-banner p,
+.elan-banner p {
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+}
 .elan-banner em {
   font-family: "Fraunces", serif !important;
   font-size: clamp(28px, 3.2vw, 44px) !important;
@@ -3147,8 +3161,9 @@ html {
 }
 
 .elan-banner p {
+  display: inline;
   margin: 0;
-  text-align: center;
+  font-style: italic;
 }
 
 .elan-banner em {
@@ -3177,4 +3192,29 @@ html {
   .elan-banner::before {
     animation: none;
   }
+}
+
+.elan-banner {
+  min-height: 160px;
+  background: #f5f0e9;
+}
+
+.elan-banner p,
+.elan-banner em {
+  font-size: clamp(25px, 2.5vw, 38px) !important;
+}
+
+.elan-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #f5f0e9,
+    transparent 25%,
+    transparent 75%,
+    #f5f0e9
+  );
+  pointer-events: none;
 }

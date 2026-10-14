@@ -123,36 +123,49 @@ markCurrentSection();
   positionPanel();
 })();
 
-// Préselection du format depuis les cartes.
+// Préremplissage du format depuis les formules.
 (() => {
   const formatSelect = document.querySelector("#contact-format");
   const form = document.querySelector("#contact-form");
   const contact = document.querySelector("#contact");
+
   if (!formatSelect || !form || !contact) return;
 
-  document.querySelectorAll('a[href^="#contact?formule="]').forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
+  document
+    .querySelectorAll('a[data-formule], a[href^="#contact?formule="]')
+    .forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
 
-      const params = new URLSearchParams(
-        link.getAttribute("href").split("?")[1],
-      );
+        const params = new URLSearchParams(
+          (link.getAttribute("href") || "").split("?")[1] || ""
+        );
 
-      formatSelect.value = params.get("formule") || "";
+        const format =
+          link.dataset.formule || params.get("formule") || "";
 
-      history.replaceState(null, "", "#contact");
-      window.dispatchEvent(new Event("hashchange"));
+        if ([...formatSelect.options].some(
+          (option) => option.value === format
+        )) {
+          formatSelect.value = format;
+          formatSelect.dispatchEvent(
+            new Event("change", { bubbles: true })
+          );
+        }
 
-      contact.scrollIntoView({
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-          ? "auto"
-          : "smooth",
-        block: "start",
+        history.replaceState(null, "", "#contact");
+        window.dispatchEvent(new Event("hashchange"));
+
+        contact.scrollIntoView({
+          behavior: window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches ? "auto" : "smooth",
+          block: "start"
+        });
       });
     });
-  });
 
-  // Bloque l’envoi tant que le service n’est pas connecté.
+  // Envoi désactivé tant que le service n’est pas connecté.
   form.addEventListener("submit", (event) => {
     event.preventDefault();
   });

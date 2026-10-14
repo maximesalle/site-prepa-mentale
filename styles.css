@@ -3269,45 +3269,48 @@ html {
 }
 
 
-/* MON ACCOMPAGNEMENT — VERSION MOBILE */
+  
+/* MON ACCOMPAGNEMENT — AJUSTEMENTS MOBILE */
 
 @media (max-width: 700px) {
 
-  /* Réduire la hauteur de la photo de fond */
+  /* 1. Raccourcir la photo de fond */
   .accompagnement-immersif .accompagnement-scene {
     min-height: 340px;
-    padding: 28px 24px 160px;
+    padding: 28px 24px 140px;
     background:
       linear-gradient(
         180deg,
-        rgba(25, 20, 24, 0.75),
+        rgba(25, 20, 24, 0.80),
         rgba(25, 20, 24, 0.05) 85%
       ),
       url("images/bandeau-accompagnement.png")
       78% bottom / cover no-repeat;
   }
 
-  /* Placer le texte sous la photo */
-  .accompagnement-immersif .accompagnement-scene-copy {
-    display: contents;
-  }
-
+  /* 2. Paragraphe entre les deux photos */
   .accompagnement-immersif .accompagnement-conviction {
-    color: #302631;
-    background: #f5f0e9;
-    padding: 28px 24px 8px;
-    font-size: 15px !important;
-  }
-
-  .accompagnement-immersif .accompagnement-scene {
     display: block;
+    margin: 0;
+    padding: 28px 24px 0;
+    background: #f5f0e9;
+    color: #302631;
+    font-size: 15px !important;
+    line-height: 1.65;
   }
-}
 
+  /* 3. Rapprocher le portrait du paragraphe */
+  .accompagnement-immersif .accompagnement-rencontre {
+    padding-top: 28px;
+  }
 
-@media (max-width: 700px) {
+  /* 4. Décaler la citation vers la droite */
   .accompagnement-immersif .accompagnement-signature {
-    padding-right: 8px;
+    justify-self: end;
+    margin-left: auto;
+    margin-right: 8px;
+    padding-right: 26px;
   }
 }
+
 

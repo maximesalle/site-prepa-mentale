@@ -2948,12 +2948,12 @@ html {
 
 .accompagnement-immersif .accompagnement-plaisir {
   font: inherit !important;
-  color: #f49580 !important;
+  color: #d6c3e6 !important;
 }
 
 .accompagnement-immersif .accompagnement-pouvoir {
   font: inherit !important;
-  color: #d6c3e6 !important;
+  color: #f5f0e9 !important;
   font-weight: 700 !important;
 }
 
@@ -2987,7 +2987,10 @@ html {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: normal;
-  color: #51344f;
+  color: #8b739e !important;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
 }
 
 @media (min-width: 901px) {
@@ -3019,5 +3022,13 @@ html {
 
   .accompagnement-immersif .accompagnement-signature br {
     display: none;
+  }
+}
+@media (min-width: 901px) {
+  .accompagnement-immersif .accompagnement-photo {
+    position: relative;
+    z-index: 1;
+    transform: translateY(-56px);
+    margin-bottom: -56px;
   }
 }

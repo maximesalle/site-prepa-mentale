@@ -2632,19 +2632,26 @@ html {
     display: none;
   }
 
-  /* Transformer l’étiquette de l’intro en titre simple */
-  #accueil .hero-method-label {
-    position: static;
-    transform: none;
-    max-width: none;
-    padding: 0;
-    margin: 0 0 14px;
-    background: transparent;
+  /* Sur mobile, garder l’étiquette citron au-dessus du cadre */
+  #accueil .hero-method {
+    margin-top: 28px;
+    padding-top: 38px;
   }
 
-  #accueil .hero-method {
-    padding-top: 20px;
+  #accueil .hero-method-label {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    transform: translateY(-50%);
+    width: max-content;
+    max-width: calc(100% - 24px);
+    margin: 0;
+    padding: 8px 11px;
+    background: #dfff00;
+    color: var(--ink);
+    z-index: 2;
   }
+
 }
 
 /* Logo dans le bandeau */
@@ -3331,3 +3338,15 @@ html {
   }
 }
   
+
+/* Correctif mobile : phrase d'information sous le CTA */
+@media (max-width: 700px) {
+  #accueil .hero-reassurance-mobile {
+    display: block;
+    order: 4;
+    margin: 9px 23px 24px;
+    color: var(--ink);
+    font-size: 12px !important;
+    line-height: 1.45;
+  }
+}

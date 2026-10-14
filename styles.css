@@ -2989,7 +2989,7 @@ html {
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #51344f;
+  color: #202631;
 }
 
 .accompagnement-immersif .signature-impact {
@@ -3002,7 +3002,10 @@ html {
   line-height: 1.15;
   letter-spacing: normal;
   white-space: nowrap;
-  color: #8b739e;
+  background: none;
+color: #e86d55 !important;
+text-transform: uppercase;
+padding: 0;
 }
 
 @media (min-width: 901px) {
@@ -3121,4 +3124,20 @@ text-transform: none;
     max-width: 100%;
     white-space: normal;
   }
+}
+
+.accompagnement-immersif .accompagnement-signature {
+  position: relative;
+  padding-right: 26px;
+}
+
+.accompagnement-immersif .accompagnement-signature::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  background: #dfff00;
+  pointer-events: none;
 }

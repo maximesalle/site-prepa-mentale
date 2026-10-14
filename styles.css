@@ -3045,3 +3045,20 @@ html {
     margin-bottom: -56px;
   }
 }
+
+.accompagnement-immersif .accompagnement-signature {
+  position: relative;
+  isolation: isolate;
+  padding: 24px 20px;
+}
+
+.accompagnement-immersif .accompagnement-signature::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5px -12px 0 -10px;
+  background: #e8deed;
+  border-radius: 46% 54% 38% 62% / 35% 42% 58% 65%;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}

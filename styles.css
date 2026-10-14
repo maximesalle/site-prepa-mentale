@@ -1238,7 +1238,7 @@ html {
 }
 
 #offres {
-  background: ##f1e2db;
+  background: #f1e2db;
 }
 
 #offres .offers-steps {
@@ -3121,6 +3121,11 @@ html {
   z-index: -1;
   inset: -20%;
   background:
+    radial-gradient(
+  ellipse at 5% 40%,
+  rgba(223, 255, 0, 0.38),
+  transparent 32%
+),
     radial-gradient(
       ellipse at 10% 75%,
       rgba(81, 52, 79, 0.48),

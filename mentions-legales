@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentions légales & confidentialité | Maxime Sallé</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main class="legal-page">
+    <a class="legal-back" href="index.html">← Retour à l'accueil</a>
+
+    <p class="eyebrow">INFORMATIONS LÉGALES</p>
+    <h1>Mentions légales <em>& confidentialité</em></h1>
+
+    <section>
+      <h2>1. Éditeur du site</h2>
+      <p>
+        Nom : Maxime Sallé<br>
+        Statut juridique : XXX<br>
+        Adresse professionnelle : XXX<br>
+        SIRET : XXX<br>
+        E-mail : XXX<br>
+        Téléphone : XXX
+      </p>
+      <p>Responsable de la publication : Maxime Sallé</p>
+    </section>
+
+    <section>
+      <h2>2. Hébergement</h2>
+      <p>
+        Hébergeur : XXX<br>
+        Adresse : XXX<br>
+        Téléphone : XXX
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Médiation de la consommation</h2>
+      <p>
+        Pour tout litige de consommation non résolu après
+        une réclamation écrite, vous pouvez recourir
+        gratuitement au médiateur de la consommation
+        dont relève l'activité :
+      </p>
+      <p>
+        Nom du médiateur : XXX<br>
+        Adresse : XXX<br>
+        Site internet : XXX
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Données personnelles</h2>
+      <p>
+        Responsable du traitement : Maxime Sallé,
+        joignable à l'adresse XXX.
+      </p>
+      <p>
+        Lorsque le formulaire de contact sera activé,
+        les informations renseignées (prénom, adresse
+        e-mail, message et format d'accompagnement
+        souhaité) seront utilisées pour répondre
+        aux demandes et organiser les rendez-vous.
+      </p>
+      <p>
+        Ce traitement reposera sur les démarches
+        précontractuelles effectuées à votre demande.
+        Les données seront accessibles uniquement
+        aux personnes et prestataires nécessaires
+        à leur traitement.
+      </p>
+      <p>
+        Durée de conservation : XXX
+      </p>
+      <p>
+        Vous pouvez demander l'accès, la rectification
+        ou l'effacement de vos données, ainsi que
+        l'exercice de vos autres droits applicables,
+        en écrivant à XXX.
+        Vous pouvez également introduire une
+        réclamation auprès de la CNIL (www.cnil.fr).
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Maxime Sallé © 2026</span>
+    <span>Paris · Val-de-Marne · Visio</span>
+    <a href="index.html">Accueil ↗</a>
+  </footer>
+</body>
+</html>

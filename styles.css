@@ -3195,3 +3195,76 @@ html {
   }
 }
 
+
+/* PAGE MENTIONS LÉGALES */
+
+.legal-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 90px 28px 110px;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 65px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.legal-back:hover {
+  text-decoration: underline;
+}
+
+.legal-page h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 20px 0 65px;
+}
+
+.legal-page h1 em {
+  font-weight: 400;
+}
+
+.legal-page section {
+  margin-bottom: 42px;
+}
+
+.legal-page h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.legal-page section p {
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.legal-page a {
+  color: inherit;
+}
+
+.contact-privacy a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .legal-page {
+    padding: 55px 22px 75px;
+  }
+
+  .legal-back {
+    margin-bottom: 45px;
+  }
+
+  .legal-page h1 {
+    margin-bottom: 45px;
+  }
+}
+

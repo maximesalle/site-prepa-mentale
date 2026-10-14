@@ -3141,3 +3141,47 @@ text-transform: none;
   background: #dfff00;
   pointer-events: none;
 }
+
+.accompagnement-immersif .accompagnement-signature {
+  position: relative;
+  padding: 0 26px 0 0;
+  text-align: right;
+}
+
+.accompagnement-immersif .signature-intro,
+.accompagnement-immersif .signature-impact {
+  display: block;
+  font-family: "Fraunces", serif !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  letter-spacing: normal;
+  text-align: right;
+  background: none !important;
+  padding: 0;
+}
+
+.accompagnement-immersif .signature-intro {
+  font-size: 24px !important;
+  line-height: 1.25;
+  color: #302631 !important;
+}
+
+.accompagnement-immersif .signature-impact {
+  margin-top: 6px;
+  font-size: 38px !important;
+  line-height: 1.1;
+  text-transform: none;
+  color: #e86d55 !important;
+}
+
+.accompagnement-immersif .accompagnement-signature::before {
+  content: none;
+}
+
+.accompagnement-immersif .accompagnement-signature::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 10px;
+  background: #dfff00;
+}

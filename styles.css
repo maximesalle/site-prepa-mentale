@@ -3268,3 +3268,39 @@ html {
   }
 }
 
+
+/* MON ACCOMPAGNEMENT — VERSION MOBILE */
+
+@media (max-width: 700px) {
+
+  /* Réduire la hauteur de la photo de fond */
+  .accompagnement-immersif .accompagnement-scene {
+    min-height: 340px;
+    padding: 28px 24px 160px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(25, 20, 24, 0.75),
+        rgba(25, 20, 24, 0.05) 85%
+      ),
+      url("images/bandeau-accompagnement.png")
+      78% bottom / cover no-repeat;
+  }
+
+  /* Placer le texte sous la photo */
+  .accompagnement-immersif .accompagnement-scene-copy {
+    display: contents;
+  }
+
+  .accompagnement-immersif .accompagnement-conviction {
+    color: #302631;
+    background: #f5f0e9;
+    padding: 28px 24px 8px;
+    font-size: 15px !important;
+  }
+
+  .accompagnement-immersif .accompagnement-scene {
+    display: block;
+  }
+}
+

@@ -2772,14 +2772,15 @@ html {
   content: none;
 }
 
-.site-header .brand img {
+.site-header .brand svg {
   display: block;
   width: 165px;
   height: auto;
+  color: #8B739E;
 }
 
 @media (max-width: 700px) {
-  .site-header .brand img {
+  .site-header .brand svg {
     width: 130px;
   }
 }

@@ -3314,3 +3314,31 @@ html {
 }
 
 
+
+
+/* Ajustement final : conviction dans le bandeau sur ordinateur,
+   entre le bandeau et le portrait sur mobile. */
+.accompagnement-immersif .conviction-desktop {
+  display: block;
+  margin: 0 !important;
+  color: #f5f0e9;
+}
+.accompagnement-immersif .conviction-mobile {
+  display: none;
+}
+@media (max-width: 700px) {
+  .accompagnement-immersif .conviction-desktop {
+    display: none;
+  }
+  .accompagnement-immersif .conviction-mobile {
+    display: block;
+    margin: 0 !important;
+    padding: 28px 24px 0;
+    background: #f5f0e9;
+    color: #302631;
+  }
+  /* Le récit précède le portrait, sans superposition. */
+  .accompagnement-immersif .accompagnement-recit { order: 1; }
+  .accompagnement-immersif .accompagnement-photo { order: 2; }
+  .accompagnement-immersif .accompagnement-signature { order: 3; }
+}

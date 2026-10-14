@@ -3229,3 +3229,22 @@ text-transform: none;
   border-radius: 0;
   background: #e86d55;
 }
+
+@media (min-width: 901px) {
+  .accompagnement-immersif .signature-intro {
+    font-size: 28px !important;
+  }
+
+  .accompagnement-immersif .signature-impact {
+    font-size: 44px !important;
+  }
+
+  .accompagnement-immersif .accompagnement-photo {
+    left: -24px;
+  }
+
+  .accompagnement-immersif .accompagnement-recit {
+    position: relative;
+    left: -24px;
+  }
+}

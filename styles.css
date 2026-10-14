@@ -3101,3 +3101,80 @@ html {
     left: -24px;
   }
 }
+
+/* Transition entre situations et offres */
+
+.elan-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  padding: 36px 24px;
+  background: #ddd0e8;
+}
+
+.elan-banner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -25%;
+  background:
+    radial-gradient(
+      ellipse at 85% 60%,
+      rgba(223, 255, 0, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      115deg,
+      #ad93c1 10%,
+      #d8c8e5 48%,
+      #f5f0e9 90%
+    );
+  animation: elan-gradient 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.elan-banner p,
+.elan-banner em {
+  font-family: "Fraunces", serif !important;
+  font-size: clamp(28px, 3.2vw, 44px) !important;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #51344f;
+}
+
+.elan-banner p {
+  margin: 0;
+  text-align: center;
+}
+
+.elan-banner em {
+  display: block;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+@keyframes elan-gradient {
+  from {
+    transform: translateX(-3%) rotate(-2deg);
+  }
+  to {
+    transform: translateX(3%) rotate(2deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .elan-banner {
+    min-height: 170px;
+    padding: 30px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elan-banner::before {
+    animation: none;
+  }
+}

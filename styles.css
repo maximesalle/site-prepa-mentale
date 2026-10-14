@@ -2943,3 +2943,73 @@ html {
     margin-inline: auto;
   }
 }
+
+/* Accents de couleur */
+
+.accompagnement-immersif .accompagnement-plaisir {
+  font: inherit !important;
+  color: #d6c3e6 !important;
+}
+
+.accompagnement-immersif .accompagnement-pouvoir {
+  font: inherit !important;
+  color: #dfff00;
+}
+
+.accompagnement-immersif .accompagnement-surlignage {
+  font: inherit !important;
+  background: linear-gradient(
+    transparent 55%,
+    #dfff00 55%,
+    #dfff00 92%,
+    transparent 92%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Photo, récit et citation */
+
+.accompagnement-immersif .accompagnement-rencontre {
+  grid-template-columns:
+    minmax(0, 240px)
+    minmax(0, 1fr)
+    minmax(0, 240px);
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.accompagnement-immersif .accompagnement-signature {
+  margin: 0;
+  font-family: "Fraunces", serif !important;
+  font-size: clamp(26px, 2.5vw, 36px) !important;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #51344f;
+}
+
+@media (max-width: 1100px) {
+  .accompagnement-immersif .accompagnement-rencontre {
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  }
+
+  .accompagnement-immersif .accompagnement-signature {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .accompagnement-immersif .accompagnement-rencontre {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .accompagnement-immersif .accompagnement-signature {
+    grid-column: 1;
+    font-size: 28px !important;
+  }
+
+  .accompagnement-immersif .accompagnement-signature br {
+    display: none;
+  }
+}

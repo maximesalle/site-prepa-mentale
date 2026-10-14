@@ -3036,10 +3036,6 @@ html {
     grid-row: auto;
     font-size: 28px !important;
   }
-
-  .accompagnement-immersif .accompagnement-signature br {
-    display: none;
-  }
 }
 @media (min-width: 901px) {
   .accompagnement-immersif .accompagnement-photo {

@@ -3047,13 +3047,78 @@ html {
   padding: 24px 20px;
 }
 
+/* Citation : contraste typographique */
+
+.accompagnement-immersif .accompagnement-signature {
+  position: static;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  justify-self: start;
+  text-align: left;
+}
+
 .accompagnement-immersif .accompagnement-signature::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 5px -12px 0 -10px;
-  background: #e8deed;
-  border-radius: 46% 54% 38% 62% / 35% 42% 58% 65%;
-  transform: rotate(-5deg);
-  pointer-events: none;
+  content: none;
+}
+
+.accompagnement-immersif .signature-intro {
+  display: block;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3;
+  color: #51344f;
+}
+
+.accompagnement-immersif .signature-impact {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 9px;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: clamp(32px, 3vw, 46px) !important;
+  font-weight: 700 !important;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #51344f !important;
+  background: #dfff00;
+}
+
+@media (min-width: 901px) {
+  .accompagnement-immersif .accompagnement-rencontre {
+    grid-template-columns:
+      minmax(0, 200px)
+      minmax(0, 740px)
+      minmax(0, 340px);
+    justify-content: center;
+    gap: clamp(24px, 2.5vw, 40px);
+  }
+
+  .accompagnement-immersif .accompagnement-signature {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1150px) {
+  .accompagnement-immersif .signature-impact {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .accompagnement-immersif .accompagnement-signature {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .accompagnement-immersif .signature-impact {
+    font-size: clamp(28px, 7vw, 40px) !important;
+    max-width: 100%;
+    white-space: normal;
+  }
 }

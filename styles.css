@@ -2948,12 +2948,13 @@ html {
 
 .accompagnement-immersif .accompagnement-plaisir {
   font: inherit !important;
-  color: #d6c3e6 !important;
+  color: #f49580 !important;
 }
 
 .accompagnement-immersif .accompagnement-pouvoir {
   font: inherit !important;
-  color: #dfff00;
+  color: #d6c3e6 !important;
+  font-weight: 700 !important;
 }
 
 .accompagnement-immersif .accompagnement-surlignage {
@@ -2989,23 +2990,30 @@ html {
   color: #51344f;
 }
 
-@media (max-width: 1100px) {
+@media (min-width: 901px) {
   .accompagnement-immersif .accompagnement-rencontre {
-    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 200px)
+      minmax(0, 1fr)
+      minmax(0, 220px);
+    gap: 28px;
   }
 
   .accompagnement-immersif .accompagnement-signature {
-    grid-column: 2;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .accompagnement-immersif .accompagnement-rencontre {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .accompagnement-immersif .accompagnement-signature {
     grid-column: 1;
+    grid-row: auto;
     font-size: 28px !important;
   }
 

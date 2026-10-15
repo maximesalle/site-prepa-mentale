@@ -3456,12 +3456,60 @@ html {
 
 /* Pictogrammes et conclusion */
 #accueil .signature-feature-icon { display:grid; place-items:center; flex:none; width:34px; height:34px; border-radius:50%; background:#e9ddea; color:#76517e; font-family:inherit; font-size:21px!important; }
-#accueil .signature-after { padding:48px clamp(24px,5.4vw,100px) 62px; text-align:center; }
-#accueil .signature-after h2 { max-width:1050px; margin:0 auto; font-family:Georgia,serif; font-weight:400; font-size:clamp(33px,3.8vw,57px)!important; line-height:1.18; letter-spacing:-.025em; color:#342b35; }
-#accueil .signature-after h2 span { color:#8c6795; font:inherit!important; }
-#accueil .signature-after h2 em { font:inherit!important; font-style:italic!important; }
-@media(max-width:767px) { #accueil .signature-after { padding:36px 23px 55px; } #accueil .signature-after h2 { font-size:clamp(32px,8vw,46px)!important; } }
+/* Pictogrammes */
+#accueil .signature-feature-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e9ddea;
+  color: #76517e;
+  font-family: inherit;
+  font-size: 21px !important;
+}
 
+/* Bandeau de conclusion */
+#accueil .signature-after {
+  width: 100%;
+  max-width: none;
+  padding: 52px 24px 58px;
+  background: #76517e;
+  text-align: center;
+}
+
+#accueil .signature-after h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 3.1vw, 48px) !important;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f7f2eb;
+}
+
+#accueil .signature-after-accent {
+  margin: 4px 0 12px;
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 3.8vw, 58px) !important;
+  font-style: italic;
+  line-height: 1.15;
+  color: #dfff00;
+}
+
+#accueil .signature-after-subtitle {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(15px, 1.3vw, 19px) !important;
+  line-height: 1.5;
+  color: #f7f2eb;
+}
+
+@media (max-width: 767px) {
+  #accueil .signature-after {
+    padding: 42px 23px 48px;
+  }
+}
 #accueil .highlight-citron {
   background: linear-gradient(
     transparent 72%,

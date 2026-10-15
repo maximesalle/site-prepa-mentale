@@ -3341,35 +3341,6 @@ html {
   }
 }
 
-/* ACCUEIL — ordre des éléments sur mobile */
-@media (max-width: 700px) {
-
-  #accueil .hero-copy {
-    display: contents;
-  }
-
-  #accueil .hero-copy > h1 {
-    order: 1;
-  }
-
-  #accueil .hero-visual {
-    order: 2;
-  }
-
-  #accueil .hero-method {
-    order: 3;
-    margin: 28px 23px 24px;
-    width: calc(100% - 46px);
-  }
-
-  #accueil .hero-cta-mobile {
-    order: 4;
-  }
-
-  #accueil .hero-reassurance-mobile {
-    order: 5;
-  }
-}
 
 #accueil h1 .hero-no-wrap {
   display: inline-block;
@@ -3383,4 +3354,26 @@ html {
 #accueil h1 .hero-no-wrap .hero-parme {
   font-family: inherit !important;
   font-size: inherit !important;
+}
+
+@media (max-width: 700px) {
+  #accueil .hero-copy > p:not(.hero-reassurance) {
+    order: 2;
+  }
+
+  #accueil .hero-visual {
+    order: 3;
+  }
+
+  #accueil .hero-method {
+    order: 4;
+  }
+
+  #accueil .hero-cta-mobile {
+    order: 5;
+  }
+
+  #accueil .hero-reassurance-mobile {
+    order: 6;
+  }
 }

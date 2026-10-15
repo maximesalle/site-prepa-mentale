@@ -3356,7 +3356,16 @@ html {
   font-size: inherit !important;
 }
 
+/* ACCUEIL — ordre sur mobile */
 @media (max-width: 700px) {
+  #accueil .hero-copy {
+    display: contents;
+  }
+
+  #accueil .hero-copy > h1 {
+    order: 1;
+  }
+
   #accueil .hero-copy > p:not(.hero-reassurance) {
     order: 2;
   }
@@ -3367,6 +3376,8 @@ html {
 
   #accueil .hero-method {
     order: 4;
+    margin: 28px 23px 24px;
+    width: calc(100% - 46px);
   }
 
   #accueil .hero-cta-mobile {

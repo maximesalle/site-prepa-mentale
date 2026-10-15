@@ -3550,3 +3550,10 @@ html {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+#accueil .signature-after em {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #76517e;
+}

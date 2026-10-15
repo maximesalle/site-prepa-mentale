@@ -3400,15 +3400,20 @@ html {
 }
 #accueil .hero-new-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(350px, 38vw);
+  grid-template-columns: minmax(0, 1fr) minmax(440px, 51vw);
   gap: clamp(24px, 3.2vw, 60px);
-  align-items: start;
+  align-items: stretch;
+  position: relative;
+  padding-bottom: 5px;
   padding-left: clamp(24px, 5.3vw, 95px);
 }
 #accueil .hero-new-left {
   min-width: 0;
   max-width: 770px;
-  padding: clamp(32px, 3.3vw, 58px) 0 36px;
+  padding: 35px 0 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #accueil .hero-new-intro { max-width: 660px; }
 #accueil .hero-new-lead {
@@ -3459,10 +3464,10 @@ html {
 }
 #accueil .hero-new-method {
   max-width: 660px;
-  margin-top: clamp(35px, 3.5vw, 55px);
+  margin-top: 28px;
 }
 #accueil .hero-new-method h1 {
-  margin: 0 0 19px;
+  margin: 0 0 15px;
   font-family: Georgia, serif;
   font-size: clamp(27px, 2.25vw, 36px) !important;
   font-weight: 400;
@@ -3485,7 +3490,7 @@ html {
   align-items: center;
   column-gap: 13px;
   min-width: 0;
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #e5dcd9;
 }
 #accueil .hero-new-icon {
@@ -3513,7 +3518,7 @@ html {
   line-height: 1.4;
   color: #514650;
 }
-#accueil .hero-new-contact { margin-top: 20px; text-align: left; }
+#accueil .hero-new-contact { margin-top: 16px; text-align: left; }
 #accueil .hero-new-contact p {
   max-width: 550px;
   margin: 10px 0 0;
@@ -3525,13 +3530,29 @@ html {
    Le panneau touche le bord droit de l'écran, sans marge ni cadre. */
 #accueil .hero-new-photo {
   width: 100%;
+  height: clamp(490px, 42vw, 630px);
+  min-width: 0;
   overflow: hidden;
   background: #a65e54;
 }
 #accueil .hero-new-photo img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 39%;
+}
+/* Trait citron continu : il part de la colonne texte et se prolonge sous la photo. */
+#accueil .hero-new-layout::after {
+  content: "";
+  position: absolute;
+  left: clamp(24px, 5.3vw, 95px);
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #dfff00;
+  transform: rotate(-.12deg);
+  transform-origin: left center;
 }
 #accueil .hero-new-finale {
   max-width: 1250px;
@@ -3558,11 +3579,11 @@ html {
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   #accueil .hero-new-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 38vw);
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 46vw);
     gap: 24px;
     padding-left: 28px;
   }
-  #accueil .hero-new-left { padding-top: 28px; }
+  #accueil .hero-new-left { padding-top: 26px; }
   #accueil .hero-new-question { font-size: clamp(29px, 3.4vw, 38px) !important; }
   #accueil .hero-new-method { margin-top: 25px; }
   #accueil .hero-new-benefits article { padding: 8px 0; }
@@ -3572,8 +3593,9 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 0;
+    padding: 0 0 4px;
   }
+  #accueil .hero-new-layout::after { left: 23px; }
   #accueil .hero-new-left { display: contents; }
   #accueil .hero-new-intro {
     order: 1;
@@ -3582,8 +3604,8 @@ html {
   #accueil .hero-new-lead { font-size: 15px !important; }
   #accueil .hero-new-question { font-size: clamp(32px, 8.3vw, 43px) !important; }
   #accueil .hero-new-explanation { font-size: 15px !important; }
-  #accueil .hero-new-photo { order: 2; width: 100%; }
-  #accueil .hero-new-photo img { width: 100%; height: auto; }
+  #accueil .hero-new-photo { order: 2; width: 100%; height: 390px; }
+  #accueil .hero-new-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
   #accueil .hero-new-method {
     order: 3;
     margin: 0;

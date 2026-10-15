@@ -3370,3 +3370,17 @@ html {
     order: 5;
   }
 }
+
+#accueil h1 .hero-no-wrap {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+#accueil h1 .hero-no-wrap .hero-parme {
+  font-family: inherit !important;
+  font-size: inherit !important;
+}

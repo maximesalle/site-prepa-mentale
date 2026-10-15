@@ -3396,7 +3396,7 @@ html {
 /* ACCUEIL SIGNATURE — scoped editorial composition */
 #accueil.signature-hero { background:#f7f2eb; padding:0; overflow:hidden; color:#342b35; }
 #accueil .signature-stage { position:relative; display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 43%); min-height:650px; }
-#accueil .signature-editorial { padding:39px clamp(24px,4.8vw,82px) 32px clamp(24px,5.4vw,100px); display:flex; flex-direction:column; justify-content:space-between; min-width:0; gap:26px; }
+#accueil .signature-editorial { padding:39px clamp(24px,4.8vw,82px) 32px clamp(24px,5.4vw,100px); display:flex; flex-direction:column; justify-content:flex-start; min-width:0; gap:20px; }
 #accueil .signature-opening { max-width:680px; }
 #accueil .signature-kicker { margin:0 0 12px; font-family:inherit; font-size:clamp(14px,1.15vw,17px)!important; line-height:1.4; color:#746971; font-weight:400; }
 #accueil #hero-title { margin:0 0 18px; font-family:Georgia,serif; font-size:clamp(34px,3.4vw,54px)!important; line-height:1.03; font-weight:400; letter-spacing:-.052em; color:#342b35; }

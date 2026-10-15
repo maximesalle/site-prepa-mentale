@@ -3487,29 +3487,28 @@ html {
   position: absolute;
   z-index: -1;
   inset: -20%;
-  background:
+ background:
   radial-gradient(
     ellipse at 90% 75%,
-    rgba(81, 52, 79, 0.48),
-    transparent 48%
+    rgba(81, 52, 79, 0.22),
+    transparent 55%
   ),
   radial-gradient(
     ellipse at 15% 25%,
-    rgba(232, 109, 92, 0.55),
-    transparent 45%
+    rgba(232, 109, 92, 0.25),
+    transparent 55%
   ),
   radial-gradient(
     ellipse at 0% 75%,
-    rgba(223, 255, 0, 0.85),
-    transparent 35%
+    rgba(223, 255, 0, 0.35),
+    transparent 48%
   ),
   linear-gradient(
     100deg,
-    #e9d5a8 0%,
-    #f0c4b4 45%,
-    #bca0c5 100%
+    #eee8c9 0%,
+    #f1dcd3 48%,
+    #d7c5df 100%
   );
-}
 
 #accueil .signature-after p {
   width: 100%;

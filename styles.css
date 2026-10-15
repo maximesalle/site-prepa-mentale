@@ -3395,13 +3395,11 @@ html {
 
 /* ACCUEIL SIGNATURE — scoped editorial composition */
 #accueil.signature-hero { background:#f7f2eb; padding:0; overflow:hidden; color:#342b35; }
-#accueil .signature-stage { position:relative; display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 43%); min-height:680px; }
+#accueil .signature-stage { position:relative; display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 43%); min-height:650px; }
 #accueil .signature-editorial { padding:39px clamp(24px,4.8vw,82px) 32px clamp(24px,5.4vw,100px); display:flex; flex-direction:column; justify-content:space-between; min-width:0; gap:26px; }
 #accueil .signature-opening { max-width:680px; }
-#accueil .signature-eyebrow { margin:0 0 37px; font-family:inherit; font-size:10px!important; font-weight:700; letter-spacing:.21em; color:#805e83; }
-#accueil .signature-eyebrow span { margin:0 9px; color:#db6d62; }
 #accueil .signature-kicker { margin:0 0 12px; font-family:inherit; font-size:clamp(15px,1.3vw,19px)!important; line-height:1.4; color:#746971; font-weight:400; }
-#accueil #hero-title { margin:0 0 18px; font-family:Georgia,serif; font-size:clamp(47px,5.1vw,88px)!important; line-height:1.03; font-weight:400; letter-spacing:-.052em; color:#342b35; }
+#accueil #hero-title { margin:0 0 18px; font-family:Georgia,serif; font-size:clamp(34px,3.4vw,54px)!important; line-height:1.03; font-weight:400; letter-spacing:-.052em; color:#342b35; }
 #accueil .signature-mental { position:relative; z-index:0; color:#8d6195; font-family:Georgia,serif!important; font-size:inherit!important; font-weight:400; white-space:nowrap; }
 #accueil .signature-mental::after { content:""; position:absolute; height:.12em; bottom:.06em; left:-.025em; right:-.045em; z-index:-1; background:#dfff00; transform:rotate(-1.7deg); }
 #accueil .signature-question { color:#dc7469; }
@@ -3409,31 +3407,24 @@ html {
 #accueil .signature-description strong { color:#342b35; font-weight:650; }
 #accueil .signature-bottom { max-width:660px; padding-top:20px; border-top:1px solid #d8cbd4; }
 #accueil .signature-bottom-heading { display:flex; align-items:baseline; justify-content:space-between; gap:15px; margin-bottom:17px; }
-#accueil .signature-number { flex-shrink:0; font-size:10px!important; letter-spacing:.14em; font-weight:700; color:#986f98; }
 #accueil .signature-bottom h2 { margin:0; font-family:Georgia,serif; font-size:clamp(25px,2.1vw,33px)!important; line-height:1.13; font-weight:400; letter-spacing:-.02em; color:#342b35; }
 #accueil .signature-bottom h2 em { font:inherit!important; font-style:italic!important; color:#926a99; }
 #accueil .signature-features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:0 0 20px; }
-#accueil .signature-features > div { border-left:2px solid #b69aba; padding-left:11px; display:flex; gap:9px; align-items:flex-start; min-width:0; }
-#accueil .signature-feature-index { font-size:10px!important; font-weight:700; color:#b49ab5; }
-#accueil .signature-features strong { display:block; font-family:inherit; font-size:12px!important; line-height:1.25; color:#342b35; }
+#accueil .signature-features > div { border-left:2px solid #b69aba; padding-left:10px; display:flex; flex-direction:column; gap:7px; align-items:flex-start; min-width:0; }
+#accueil .signature-features strong { display:block; font-family:inherit; font-size:13px!important; line-height:1.3; color:#342b35; }
 #accueil .signature-features small { display:block; margin-top:5px; font-family:inherit; font-size:11px!important; line-height:1.4; color:#756a73; }
 #accueil .signature-action { display:flex; gap:18px; align-items:center; }
 #accueil .signature-button { flex-shrink:0; display:inline-flex; gap:18px; align-items:center; justify-content:space-between; padding:13px 18px; background:#e67c6b; color:#30272c!important; font-family:inherit; font-size:13px!important; font-weight:650; text-decoration:none; transition:transform .2s,background .2s; }
 #accueil .signature-button:hover { transform:translateY(-2px); background:#ef907f; }
 #accueil .signature-button span { font-size:20px!important; }
 #accueil .signature-action p { margin:0; font-size:10px!important; line-height:1.5; color:#796c74; }
-#accueil .signature-visual { position:relative; min-width:0; height:680px; overflow:hidden; background:#b46d60; }
+#accueil .signature-visual { position:relative; min-width:0; height:650px; overflow:hidden; background:#b46d60; }
 #accueil .signature-visual img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 47%; }
-#accueil .signature-image-tag { position:absolute; bottom:19px; right:22px; color:white; background:rgba(54,34,41,.48); backdrop-filter:blur(8px); padding:9px 12px; font-family:inherit; font-size:10px!important; font-weight:600; letter-spacing:.13em; }
-#accueil .signature-image-tag span { margin-left:12px; }
-#accueil .signature-thread { position:absolute; bottom:0; left:clamp(24px,5.4vw,100px); right:0; height:5px; background:#dfff00; z-index:3; }
-#accueil .signature-thread-dot { position:absolute; left:-5px; top:-4px; height:13px; width:13px; background:#dfff00; border-radius:50%; }
-#accueil .signature-after { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:26px clamp(24px,5.4vw,100px) 32px; color:#87648b; font-family:inherit; font-size:11px!important; font-weight:700; letter-spacing:.12em; }
 @media (max-width:1150px) and (min-width:768px) {
- #accueil .signature-stage { grid-template-columns:minmax(0,1fr) 42%; min-height:670px; }
+ #accueil .signature-stage { grid-template-columns:minmax(0,1fr) 42%; min-height:650px; }
  #accueil .signature-editorial { padding:30px 25px 30px 34px; }
- #accueil #hero-title { font-size:clamp(43px,5.2vw,63px)!important; }
- #accueil .signature-visual { height:670px; }
+ #accueil #hero-title { font-size:clamp(32px,3.8vw,46px)!important; }
+ #accueil .signature-visual { height:650px; }
  #accueil .signature-features { gap:8px; }
  #accueil .signature-features > div { padding-left:6px; gap:5px; }
  #accueil .signature-thread { left:34px; }
@@ -3445,7 +3436,7 @@ html {
  #accueil .signature-opening { order:1; padding:34px 23px 28px; }
  #accueil .signature-eyebrow { font-size:9px!important; margin-bottom:27px; }
  #accueil .signature-kicker { font-size:15px!important; }
- #accueil #hero-title { margin-bottom:15px; font-size:clamp(44px,10.4vw,68px)!important; }
+ #accueil #hero-title { margin-bottom:15px; font-size:clamp(34px,8.2vw,45px)!important; }
  #accueil .signature-description { font-size:15px!important; }
  #accueil .signature-visual { order:2; height:auto; aspect-ratio:1122 / 1402; max-height:600px; width:100%; }
  #accueil .signature-visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
@@ -3462,3 +3453,11 @@ html {
  #accueil .signature-thread { left:23px; }
  #accueil .signature-after { padding:23px; display:grid; gap:10px; font-size:10px!important; }
 }
+
+/* Pictogrammes et conclusion */
+#accueil .signature-feature-icon { display:grid; place-items:center; flex:none; width:34px; height:34px; border-radius:50%; background:#e9ddea; color:#76517e; font-family:inherit; font-size:21px!important; }
+#accueil .signature-after { padding:48px clamp(24px,5.4vw,100px) 62px; text-align:center; }
+#accueil .signature-after h2 { max-width:1050px; margin:0 auto; font-family:Georgia,serif; font-weight:400; font-size:clamp(33px,3.8vw,57px)!important; line-height:1.18; letter-spacing:-.025em; color:#342b35; }
+#accueil .signature-after h2 span { color:#8c6795; font:inherit!important; }
+#accueil .signature-after h2 em { font:inherit!important; font-style:italic!important; }
+@media(max-width:767px) { #accueil .signature-after { padding:36px 23px 55px; } #accueil .signature-after h2 { font-size:clamp(32px,8vw,46px)!important; } }

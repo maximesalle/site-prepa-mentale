@@ -3476,8 +3476,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 130px;
-  padding: 28px 40px;
+  min-height: 110px;
+  padding: 20px 40px;
   background: #c6b6cf;
   text-align: center;
 }
@@ -3488,27 +3488,27 @@ html {
   z-index: -1;
   inset: -20%;
   background:
-    radial-gradient(
-      ellipse at 10% 75%,
-      rgba(81, 52, 79, 0.48),
-      transparent 48%
-    ),
-    radial-gradient(
-      ellipse at 85% 25%,
-      rgba(232, 109, 92, 0.55),
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse at 100% 75%,
-      rgba(223, 255, 0, 0.85),
-      transparent 35%
-    ),
-    linear-gradient(
-      100deg,
-      #bca0c5 0%,
-      #f0c4b4 55%,
-      #e9d5a8 100%
-    );
+  radial-gradient(
+    ellipse at 90% 75%,
+    rgba(81, 52, 79, 0.48),
+    transparent 48%
+  ),
+  radial-gradient(
+    ellipse at 15% 25%,
+    rgba(232, 109, 92, 0.55),
+    transparent 45%
+  ),
+  radial-gradient(
+    ellipse at 0% 75%,
+    rgba(223, 255, 0, 0.85),
+    transparent 35%
+  ),
+  linear-gradient(
+    100deg,
+    #e9d5a8 0%,
+    #f0c4b4 45%,
+    #bca0c5 100%
+  );
 }
 
 #accueil .signature-after p {
@@ -3538,8 +3538,8 @@ html {
 }
 @media (max-width: 767px) {
   #accueil .signature-after {
-    min-height: 110px;
-    padding: 24px 22px;
+    min-height: 95px;
+    padding: 18px 22px;
   }
 
   #accueil .signature-after p {

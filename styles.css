@@ -3416,7 +3416,6 @@ html {
 #accueil .signature-action { display:flex; gap:18px; align-items:center; }
 #accueil .signature-button { flex-shrink:0; display:inline-flex; gap:18px; align-items:center; justify-content:space-between; padding:13px 18px; background:#e67c6b; color:#30272c!important; font-family:inherit; font-size:13px!important; font-weight:650; text-decoration:none; transition:transform .2s,background .2s; }
 #accueil .signature-button:hover { transform:translateY(-2px); background:#ef907f; }
-#accueil .signature-button span { font-size:20px!important; }
 #accueil .signature-action p { margin:0; font-size:13px!important; line-height:1.5; color:#796c74; }
 #accueil .signature-visual { position:relative; min-width:0; height:650px; overflow:hidden; background:#b46d60; }
 #accueil .signature-visual img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 47%; }
@@ -3451,11 +3450,8 @@ html {
  #accueil .signature-action { flex-direction:column; align-items:flex-start; gap:11px; }
  #accueil .signature-action p { font-size:13px!important; }
  #accueil .signature-thread { left:23px; }
- #accueil .signature-after { padding:23px; display:grid; gap:10px; font-size:10px!important; }
 }
 
-/* Pictogrammes et conclusion */
-#accueil .signature-feature-icon { display:grid; place-items:center; flex:none; width:34px; height:34px; border-radius:50%; background:#e9ddea; color:#76517e; font-family:inherit; font-size:21px!important; }
 /* Pictogrammes */
 #accueil .signature-feature-icon {
   display: grid;
@@ -3469,6 +3465,7 @@ html {
   font-family: inherit;
   font-size: 21px !important;
 }
+#accueil .signature-feature-icon svg { width: 21px; height: 21px; display: block; }
 
 /* CONCLUSION ACCUEIL — bannière dégradée fine */
 
@@ -3517,14 +3514,13 @@ html {
 #accueil .signature-after p {
   width: 100%;
   max-width: none;
+  min-width: 0;
   margin: 0;
   padding: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
   white-space: nowrap;
-font-size: clamp(20px, 2vw, 30px) !important;
-
   font-family: "Fraunces", Georgia, serif !important;
   font-size: clamp(22px, 2.4vw, 35px) !important;
   font-weight: 500;
@@ -3570,3 +3566,25 @@ font-size: clamp(20px, 2vw, 30px) !important;
 }
 
 
+
+/* ACCUEIL — finitions responsive (sans impact sur le grand écran) */
+@media (min-width: 768px) and (max-width: 1450px) {
+  #accueil .signature-after p { white-space: normal; text-wrap: balance; }
+}
+@media (max-width: 767px) {
+  #accueil .signature-opening,
+  #accueil .signature-bottom { width: 100%; min-width: 0; }
+  #accueil .signature-opening { padding: 28px 23px 24px; }
+  #accueil .signature-bottom { padding: 27px 23px 34px; }
+  #accueil #hero-title { overflow-wrap: normal; }
+  #accueil .signature-mental { white-space: nowrap; }
+  #accueil .signature-bottom h2 { font-size: clamp(26px, 7vw, 31px) !important; }
+  #accueil .signature-features > div { border-left-color: #dfff00; }
+  #accueil .signature-after { min-height: 0; padding: 23px 20px; }
+  #accueil .signature-after p { font-size: clamp(19px, 5vw, 22px) !important; line-height: 1.35; overflow-wrap: normal; }
+  #accueil .signature-button { justify-content: center; text-align: center; max-width: 100%; }
+}
+@media (max-width: 360px) {
+  #accueil #hero-title { font-size: 32px !important; }
+  #accueil .signature-opening, #accueil .signature-bottom { padding-left: 18px; padding-right: 18px; }
+}

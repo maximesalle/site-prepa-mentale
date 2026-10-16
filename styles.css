@@ -3117,7 +3117,7 @@ html {
   overflow: hidden;
   display: grid;
   place-items: center;
-  min-height: 190px;
+  min-height: 0;
   padding: 32px 24px;
   background: #c6b6cf;
 }

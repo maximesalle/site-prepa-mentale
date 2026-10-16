@@ -3474,13 +3474,23 @@ html {
   position: absolute;
   z-index: -1;
   inset: -20%;
-  background: linear-gradient(
-  90deg,
-  rgba(89, 38, 48, 0.24) 0%,
-  rgba(89, 38, 48, 0.10) 35%,
-  rgba(223, 255, 0, 0.12) 70%,
-  rgba(223, 255, 0, 0.30) 100%
-  );
+background:
+  radial-gradient(
+    ellipse at 5% 85%,
+    rgba(89, 38, 48, 0.28),
+    transparent 55%
+  ),
+  radial-gradient(
+    ellipse at 48% 0%,
+    rgba(166, 126, 184, 0.38),
+    transparent 65%
+  ),
+  radial-gradient(
+    ellipse at 95% 90%,
+    rgba(223, 255, 0, 0.32),
+    transparent 55%
+  ),
+  #f7f2eb;
 }
 #accueil .signature-after p {
   width: 100%;

@@ -28,7 +28,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(20px, 4vw, 70px);
-  background: var(--paper);
+  background: #592630;
   z-index: 20;
 }
 
@@ -2671,7 +2671,7 @@ html {
   display: block;
   width: 165px;
   height: auto;
-  color: #8b739e;
+  color: #f7f2eb;
 }
 
 @media (max-width: 700px) {

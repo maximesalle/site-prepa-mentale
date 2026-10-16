@@ -3476,21 +3476,21 @@ html {
   inset: -20%;
 background:
   radial-gradient(
-    ellipse at 8% 85%,
+    ellipse 28% 110% at 12% 95%,
     rgba(89, 38, 48, 0.75),
-    transparent 48%
+    transparent 100%
   ),
   radial-gradient(
-    ellipse at 48% 5%,
-    rgba(160, 105, 185, 0.65),
-    transparent 52%
+    ellipse 38% 120% at 55% 0%,
+    rgba(160, 105, 185, 0.85),
+    transparent 100%
   ),
   radial-gradient(
-    ellipse at 92% 75%,
-    rgba(255, 138, 101, 0.80),
-    transparent 48%
+    ellipse 30% 130% at 88% 90%,
+    rgba(255, 138, 101, 0.90),
+    transparent 100%
   ),
-  #b78ac0;
+  #c9a1c9;
 }
 #accueil .signature-after p {
   width: 100%;

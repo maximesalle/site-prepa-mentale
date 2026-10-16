@@ -3476,6 +3476,11 @@ html {
   inset: -20%;
 background:
   radial-gradient(
+  ellipse 18% 90% at 6% 15%,
+  rgba(223, 255, 0, 0.38) 0%,
+  transparent 85%
+),
+  radial-gradient(
     ellipse 42% 180% at 8% 110%,
     rgba(89, 38, 48, 0.85) 0%,
     transparent 75%
@@ -3515,7 +3520,7 @@ background:
   font-weight: inherit;
   line-height: inherit;
   font-style: italic !important;
-  color: #f7f2eb !important;
+  color: #79458f !important;
 }
 @media (max-width: 767px) {
 }

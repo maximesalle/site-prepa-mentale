@@ -3476,19 +3476,19 @@ html {
   inset: -20%;
 background:
   radial-gradient(
-    ellipse at 5% 85%,
-    rgba(89, 38, 48, 0.28),
-    transparent 55%
+    ellipse at 0% 75%,
+    rgba(89, 38, 48, 0.75),
+    transparent 60%
   ),
   radial-gradient(
-    ellipse at 48% 0%,
-    rgba(166, 126, 184, 0.38),
+    ellipse at 90% 25%,
+    rgba(166, 126, 184, 0.65),
     transparent 65%
   ),
   radial-gradient(
-    ellipse at 95% 90%,
-    rgba(223, 255, 0, 0.32),
-    transparent 55%
+    ellipse at 50% 100%,
+    rgba(198, 182, 207, 0.40),
+    transparent 65%
   ),
   #f7f2eb;
 }

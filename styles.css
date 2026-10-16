@@ -3475,22 +3475,22 @@ html {
   z-index: -1;
   inset: -20%;
 background:
- radial-gradient(
-  ellipse 22% 95% at 12% 85%,
-  rgba(89, 38, 48, 0.95),
-  transparent 100%
+  radial-gradient(
+    ellipse 42% 180% at 8% 110%,
+    rgba(89, 38, 48, 0.85) 0%,
+    transparent 75%
   ),
   radial-gradient(
-    ellipse 38% 120% at 55% 0%,
-    rgba(160, 105, 185, 0.85),
-    transparent 100%
+    ellipse 55% 130% at 65% -35%,
+    rgba(169, 105, 190, 0.80) 0%,
+    transparent 80%
   ),
   radial-gradient(
-    ellipse 30% 130% at 88% 90%,
-    rgba(255, 138, 101, 0.90),
-    transparent 100%
+    ellipse 45% 160% at 92% 115%,
+    rgba(255, 138, 101, 0.90) 0%,
+    transparent 80%
   ),
-  #c9a1c9;
+  #e9a3a5;
 }
 #accueil .signature-after p {
   width: 100%;
@@ -3515,7 +3515,7 @@ background:
   font-weight: inherit;
   line-height: inherit;
   font-style: italic !important;
-  color: #592630;
+  color: #f7f2eb !important;
 }
 @media (max-width: 767px) {
 }

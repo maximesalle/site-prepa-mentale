@@ -3461,7 +3461,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 108px;
+  min-height: 0px;
   padding: 22px 32px;
   background: #592630;
   text-align: center;

@@ -3550,28 +3550,3 @@ html {
   #accueil #hero-title { font-size: 32px !important; }
   #accueil .signature-opening, #accueil .signature-bottom { padding-left: 18px; padding-right: 18px; }
 }
-
-/* Tous les boutons du site */
-button,
-input[type="submit"],
-input[type="button"],
-a[class*="btn"],
-a[class*="button"],
-a[class*="cta"] {
-  background-color: #592630 !important;
-  color: #f7f2eb !important;
-  border-color: #592630 !important;
-}
-
-/* Au survol */
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-a[class*="btn"]:hover,
-a[class*="button"]:hover,
-a[class*="cta"]:hover {
-  background-color: #713b48 !important;
-  color: #f7f2eb !important;
-  border-color: #713b48 !important;
-}
-  

@@ -2707,7 +2707,7 @@ html {
       rgba(25, 20, 24, 0.35) 45%,
       transparent 70%
     ),
-    url("images/bandeau-accompagnement.png") center / cover no-repeat;
+    url("images/bandeau-accompagnement.png?v=20261016") center / cover no-repeat;
 }
 
 .accompagnement-immersif .accompagnement-scene-copy {
@@ -2800,17 +2800,21 @@ html {
   }
 
   .accompagnement-immersif .accompagnement-scene {
+    display: block;
     align-items: flex-start;
-    min-height: 580px;
-    padding: 28px 24px 230px;
-    background:
+    min-height: 0;
+    padding: 30px 24px 135px;
+    background-image:
       linear-gradient(
         180deg,
-        rgba(25, 20, 24, 0.9),
-        rgba(25, 20, 24, 0.75) 55%,
-        rgba(25, 20, 24, 0.05) 80%
+        rgba(25, 20, 24, 0.87) 0%,
+        rgba(25, 20, 24, 0.68) 58%,
+        rgba(25, 20, 24, 0.12) 100%
       ),
-      url("images/bandeau-accompagnement.png") 78% bottom / auto 100% no-repeat;
+      url("images/bandeau-accompagnement.png?v=20261016");
+    background-position: center, 78% bottom;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
   }
 
   .accompagnement-immersif .accompagnement-scene-copy {
@@ -3277,23 +3281,6 @@ html {
 
 /* MON ACCOMPAGNEMENT — MOBILE */
 @media (max-width: 700px) {
-  #mon-accompagnement .accompagnement-scene {
-    display: block;
-    min-height: 0;
-    padding: 30px 24px 135px;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(25, 20, 24, 0.87) 0%,
-        rgba(25, 20, 24, 0.68) 58%,
-        rgba(25, 20, 24, 0.12) 100%
-      ),
-      url("images/bandeau-accompagnement.png");
-    background-position: center, 78% bottom;
-    background-size: cover, cover;
-    background-repeat: no-repeat;
-  }
-
   #mon-accompagnement .accompagnement-scene-copy {
     display: block;
     width: 100%;
@@ -3538,15 +3525,6 @@ background:
   color: #76517e;
 }
 @media (max-width: 767px) {
-  #accueil .signature-after {
-    min-height: 95px;
-    padding: 18px 22px;
-  }
-
-  #accueil .signature-after p {
-   white-space: normal;
-    font-size: 22px !important;
-  }
 }
 
 

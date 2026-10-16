@@ -3475,10 +3475,10 @@ html {
   z-index: -1;
   inset: -20%;
 background:
-  radial-gradient(
-    ellipse 28% 110% at 12% 95%,
-    rgba(89, 38, 48, 0.75),
-    transparent 100%
+ radial-gradient(
+  ellipse 22% 95% at 12% 85%,
+  rgba(89, 38, 48, 0.95),
+  transparent 100%
   ),
   radial-gradient(
     ellipse 38% 120% at 55% 0%,

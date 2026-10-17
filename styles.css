@@ -2077,6 +2077,12 @@ html {
   font-size: 12px !important;
   line-height: 1.5;
 }
+.contact-privacy a {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: inherit;
+  color: inherit;
+}
 
 .contact-submit {
   justify-content: center;

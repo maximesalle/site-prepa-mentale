@@ -3487,7 +3487,7 @@ color: #8d6a9f;
   width: 55%;
   height: auto;
   aspect-ratio: 1 / 1;
-  left: 4%;
+  left: -4%;
   top: 50%;
   transform: translateY(-50%);
   object-fit: cover;

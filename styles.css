@@ -3566,3 +3566,19 @@ background:
   #accueil #hero-title { font-size: 32px !important; }
   #accueil .signature-opening, #accueil .signature-bottom { padding-left: 18px; padding-right: 18px; }
 }
+
+@media (max-width: 767px) {
+  #accueil .signature-after {
+    min-height: 0;
+    height: auto;
+    padding: 16px 20px;
+  }
+
+  #accueil .signature-after p {
+    font-size: clamp(18px, 4.5vw, 22px) !important;
+    white-space: normal !important;
+    text-wrap: balance;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
+}

@@ -3410,8 +3410,10 @@ background: rgba(245, 236, 66, 0.7);
 #accueil .signature-button { flex-shrink:0; display:inline-flex; gap:18px; align-items:center; justify-content:space-between; padding:13px 18px; background:#e67c6b; color:#30272c!important; font-family:inherit; font-size:17px!important; font-weight:650; text-decoration:none; transition:transform .2s,background .2s; }
 #accueil .signature-button:hover { transform:translateY(-2px); background:#ef907f; }
 #accueil .signature-action p { margin:0; font-size:13px!important; line-height:1.5; color:#796c74; }
-#accueil .signature-visual { position:relative; min-width:0; height:650px; overflow:hidden; background:#b46d60; border-top: 6px solid #f7f2eb; }
-#accueil .signature-visual img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 47%; }
+#accueil .signature-visual { position:relative;   width: min(100%, 360px);
+  height: auto; overflow:hidden; background:#b46d60; border-top: 6px solid #f7f2eb; aspect-ratio: 1 / 1;
+  margin-inline: auto; }
+#accueil .signature-visual img { display:block; width:100%; height:100%; object-fit:contain; object-position: center; }
 @media (max-width:1150px) and (min-width:768px) {
  #accueil .signature-stage { grid-template-columns:minmax(0,1fr) 42%; min-height:650px; }
  #accueil .signature-editorial { padding:30px 25px 30px 34px; }
@@ -3430,7 +3432,7 @@ background: rgba(245, 236, 66, 0.7);
  #accueil .signature-kicker { font-size:15px!important; }
  #accueil #hero-title { margin-bottom:15px; font-size:clamp(34px,8.2vw,45px)!important; }
  #accueil .signature-description { font-size:16px!important; }
- #accueil .signature-visual { order:2; height:auto; aspect-ratio:1122 / 1402; max-height:600px; width:100%; }
+ #accueil .signature-visual { order:2; height:auto; aspect-ratio: 1 / 1; max-height:none; width:min(82%, 320px); margin-inline: auto;}
  #accueil .signature-visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
  #accueil .signature-bottom { order:3; padding:27px 23px 38px; border:0; }
  #accueil .signature-bottom-heading { display:block; margin-bottom:22px; }

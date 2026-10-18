@@ -569,7 +569,7 @@ h3,
   padding: 0 clamp(22px, 5vw, 80px);
   border-top: 0;
   border-bottom: 1px solid rgba(48, 38, 49, 0.24);
-  background-color: #ede6df;
+  background-color: #f5ded2;
 }
 
 .wayfinder > * {

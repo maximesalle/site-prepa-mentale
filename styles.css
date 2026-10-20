@@ -2832,12 +2832,12 @@ background: rgba(245, 236, 66, 0.7);
 }
 
 .accompagnement-immersif .signature-intro {
-  font-size: clamp(35px, 3.5vw, 48px);
+  font-size: clamp(28px, 2.8vw, 40px);
 }
 
 .accompagnement-immersif .signature-impact {
   margin-top: 5px;
-  font-size: clamp(50px, 5vw, 72px);
+  font-size: clamp(35px, 4.5vw, 60px);
   text-transform: uppercase;
 }
 

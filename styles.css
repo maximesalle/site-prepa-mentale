@@ -2718,7 +2718,7 @@ background: rgba(245, 236, 66, 0.7);
 }
 .accompagnement-immersif #accompagnement-title { margin: 0 0 22px; }
 .accompagnement-immersif #accompagnement-title em { font-style: italic; }
-.accompagnement-immersif .accompagnement-plaisir { color: #d6c3e6 !important; }
+.accompagnement-immersif .accompagnement-plaisir {   font: inherit !important; color: #d6c3e6 !important; }
 .accompagnement-immersif .accompagnement-conviction {
   margin: 0;
   font-family: "DM Sans", sans-serif !important;

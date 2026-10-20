@@ -367,8 +367,8 @@ footer a {
 
 body,
 body * {
-  font-family: var(--sans) !important;
-  font-size: var(--type-text) !important;
+  font-family: var(--sans);
+  font-size: var(--type-text);
 }
 
 h1,

@@ -262,40 +262,62 @@ footer a {
 
 .wayfinder {
   display: grid;
-  background: var(--paper);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--ink);
+  padding: 30px 36px;
+  gap: 24px;
 }
 
 .wayfinder > * {
-  border-right: 1px solid rgba(48, 38, 49, 0.22);
-  padding: 22px 17px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+
+  min-height: 105px;
+  padding: 0 0 16px;
+  border-right: none;
+  border-bottom: 1px solid rgba(245, 240, 233, 0.35);
+
+  color: var(--paper);
+  text-decoration: none;
+  transition: border-color 0.25s ease;
 }
 
-.wayfinder > *:first-child {
+.wayfinder > *:first-child,
+.wayfinder > *:last-child {
   padding-left: 0;
 }
 
-.wayfinder > *:last-child {
-  border-right: 0;
-}
-
 .wayfinder a {
-  font: 600 14px var(--sans);
-}
-
-.wayfinder a:hover {
-  background: var(--apricot);
-  padding-left: 24px;
+  font: 500 14px var(--sans);
+  color: var(--paper);
 }
 
 .wayfinder a span {
-  font: 700 10px var(--sans);
-  color: #876d79;
+  font: 700 38px var(--sans);
+  line-height: 1;
+  color: #f5ec42;
   align-self: flex-start;
 }
 
 .wayfinder a b {
-  font-size: 19px;
+  font-family: var(--serif);
+  font-size: 20px;
   font-weight: 400;
+  line-height: 1.2;
+}
+
+.wayfinder a:hover {
+  background: transparent;
+  padding-left: 0;
+  border-bottom-color: #f5ec42;
+}
+
+.wayfinder a:hover b {
+  color: #f5ec42;
 }
 
 .situations {

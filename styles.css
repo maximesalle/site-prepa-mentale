@@ -2784,6 +2784,7 @@ background: rgba(245, 236, 66, 0.7);
   text-align: right;
   justify-self: end;
 }
+
 .accompagnement-immersif .signature-intro,
 .accompagnement-immersif .signature-impact {
   display: block;
@@ -2795,8 +2796,17 @@ background: rgba(245, 236, 66, 0.7);
   line-height: 1.08;
   letter-spacing: -.02em;
 }
-.accompagnement-immersif .signature-intro { font-size: clamp(20px, 2vw, 28px); }
-.accompagnement-immersif .signature-impact { margin-top: 2px; font-size: clamp(30px, 3vw, 44px); text-transform: uppercase; }
+
+.accompagnement-immersif .signature-intro {
+  font-size: clamp(26px, 2.6vw, 36px);
+}
+
+.accompagnement-immersif .signature-impact {
+  margin-top: 4px;
+  font-size: clamp(38px, 3.8vw, 56px);
+  text-transform: uppercase;
+}
+
 .accompagnement-immersif .accompagnement-signature::after {
   content: "";
   position: absolute;

@@ -2687,8 +2687,7 @@ background: rgba(245, 236, 66, 0.7);
   }
 }
 
-/* Mon accompagnement — composition immersive */
-
+/* Mon accompagnement — bannière et présentation déroulante */
 #mon-accompagnement.accompagnement-immersif {
   display: block;
   margin: 0;
@@ -2697,36 +2696,17 @@ background: rgba(245, 236, 66, 0.7);
   color: #302631;
   scroll-margin-top: 90px;
 }
-
-#mon-accompagnement.accompagnement-immersif::after {
-  content: none;
-}
-
+#mon-accompagnement.accompagnement-immersif::after { content: none; }
 .accompagnement-immersif .accompagnement-scene {
   display: flex;
   align-items: center;
   min-height: 440px;
   padding: 40px clamp(24px, 5vw, 80px);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(25, 20, 24, 0.65),
-      rgba(25, 20, 24, 0.35) 45%,
-      transparent 70%
-    ),
+  background: linear-gradient(90deg, rgba(25,20,24,.65), rgba(25,20,24,.35) 45%, transparent 70%),
     url("images/bandeau-accompagnement.png?v=20261016") center / cover no-repeat;
 }
-
-.accompagnement-immersif .accompagnement-scene-copy {
-  width: 48%;
-  max-width: 580px;
-}
-
-.accompagnement-immersif .accompagnement-scene .eyebrow {
-  margin: 0 0 20px;
-  color: #f5f0e9;
-}
-
+.accompagnement-immersif .accompagnement-scene-copy { width: 48%; max-width: 580px; }
+.accompagnement-immersif .accompagnement-scene .eyebrow { margin: 0 0 20px; color: #f5f0e9; }
 .accompagnement-immersif #accompagnement-title,
 .accompagnement-immersif #accompagnement-title em {
   font-family: "Fraunces", serif !important;
@@ -2736,15 +2716,9 @@ background: rgba(245, 236, 66, 0.7);
   letter-spacing: normal;
   color: #f5f0e9;
 }
-
-.accompagnement-immersif #accompagnement-title {
-  margin: 0 0 22px;
-}
-
-.accompagnement-immersif #accompagnement-title em {
-  font-style: italic;
-}
-
+.accompagnement-immersif #accompagnement-title { margin: 0 0 22px; }
+.accompagnement-immersif #accompagnement-title em { font-style: italic; }
+.accompagnement-immersif .accompagnement-plaisir { color: #d6c3e6 !important; }
 .accompagnement-immersif .accompagnement-conviction {
   margin: 0;
   font-family: "DM Sans", sans-serif !important;
@@ -2753,371 +2727,107 @@ background: rgba(245, 236, 66, 0.7);
   color: #f5f0e9;
   text-align: left;
   hyphens: none;
-  word-break: normal;
-  overflow-wrap: normal;
 }
-
 .accompagnement-immersif .accompagnement-rencontre {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 300px);
   align-items: center;
-  gap: clamp(28px, 4vw, 60px);
-  padding: 36px clamp(24px, 5vw, 80px);
+  gap: clamp(24px, 5vw, 80px);
+  padding: 44px clamp(24px, 5vw, 80px);
 }
-
-.accompagnement-immersif .accompagnement-photo {
-  margin: 0;
+.accompagnement-deroule { min-width: 0; border-top: 1px solid #d8c9d1; border-bottom: 1px solid #d8c9d1; }
+.accompagnement-deroule summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
 }
-
-.accompagnement-immersif .accompagnement-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
+.accompagnement-deroule summary::-webkit-details-marker { display: none; }
+.accompagnement-deroule summary:focus-visible { outline: 2px solid #916da0; outline-offset: 4px; }
+.accompagnement-deroule-label { display: grid; gap: 7px; }
+.accompagnement-deroule-kicker { color: #916da0; font: 700 11px/1.3 "DM Sans", sans-serif; letter-spacing: .08em; }
+.accompagnement-deroule-titre { font: 400 clamp(24px, 2.5vw, 36px)/1.2 "Fraunces", Georgia, serif; }
+.accompagnement-deroule-aide { font: 400 14px/1.5 "DM Sans", sans-serif; }
+.accompagnement-deroule-icone {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #cdb8cf;
+  border-radius: 50%;
+  color: #916da0;
+  font: 300 30px/1 Arial, sans-serif;
+  transition: transform .2s ease;
 }
-
-.accompagnement-immersif .accompagnement-recit {
-  max-width: 740px;
-}
-
+.accompagnement-deroule[open] .accompagnement-deroule-icone { transform: rotate(45deg); }
+.accompagnement-immersif .accompagnement-recit { max-width: 740px; padding: 0 0 26px; }
 .accompagnement-immersif .accompagnement-recit p {
   margin: 0;
-  font-family: "DM Sans", sans-serif !important;
-  font-size: 15px !important;
-  line-height: 1.65;
+  font: 400 15px/1.7 "DM Sans", sans-serif !important;
   text-align: left;
   hyphens: none;
-  word-break: normal;
-  overflow-wrap: normal;
 }
-
-.accompagnement-immersif .accompagnement-recit p + p {
-  margin-top: 14px;
-}
-
-@media (max-width: 900px) {
-  .accompagnement-immersif .accompagnement-scene-copy {
-    width: 58%;
-  }
-}
-
-@media (max-width: 700px) {
-  #mon-accompagnement.accompagnement-immersif {
-    scroll-margin-top: 80px;
-  }
-
-  .accompagnement-immersif .accompagnement-scene {
-    display: block;
-    align-items: flex-start;
-    min-height: 0;
-    padding: 30px 24px 135px;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(25, 20, 24, 0.87) 0%,
-        rgba(25, 20, 24, 0.68) 58%,
-        rgba(25, 20, 24, 0.12) 100%
-      ),
-      url("images/bandeau-accompagnement.png?v=20261016");
-    background-position: center, 78% bottom;
-    background-size: cover, cover;
-    background-repeat: no-repeat;
-  }
-
-  .accompagnement-immersif .accompagnement-scene-copy {
-    width: 100%;
-    max-width: none;
-  }
-
-  .accompagnement-immersif #accompagnement-title,
-  .accompagnement-immersif #accompagnement-title em {
-    font-size: 34px !important;
-  }
-
-  .accompagnement-immersif .accompagnement-rencontre {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 22px;
-    padding: 28px 24px;
-  }
-
-  .accompagnement-immersif .accompagnement-photo {
-    width: 100%;
-    max-width: 320px;
-    margin-inline: auto;
-  }
-}
-
-/* Accents de couleur */
-
-.accompagnement-immersif .accompagnement-plaisir {
-  font: inherit !important;
-  color: #d6c3e6 !important;
-}
-
+.accompagnement-immersif .accompagnement-recit p + p { margin-top: 14px; }
 .accompagnement-immersif .accompagnement-surlignage {
-  font: inherit !important;
-  background: linear-gradient(
-    transparent 55%,
-   #f5ec42 55%,
-    #f5ec42 92%,
-    transparent 92%
-  );
+  background: linear-gradient(transparent 55%, #f5ec42 55%, #f5ec42 92%, transparent 92%);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-
-/* Photo, récit et citation */
-
-.accompagnement-immersif .accompagnement-rencontre {
-  grid-template-columns:
-    minmax(0, 240px)
-    minmax(0, 1fr)
-    minmax(0, 240px);
-  gap: clamp(24px, 3vw, 44px);
-}
-
-.accompagnement-immersif .accompagnement-signature {
-  margin: 0;
-}
-
-.accompagnement-immersif .signature-intro {
-  font-family: "Fraunces", serif !important;
-  font-size: clamp(22px, 2vw, 28px) !important;
-  font-style: normal;
-  font-weight: 400;
-
-  letter-spacing: normal;
-}
-
-.accompagnement-immersif .signature-impact {
-  margin-top: 4px;
-  font-family: "Fraunces", serif !important;
-  font-size: clamp(34px, 3vw, 44px) !important;
-  font-style: italic;
-  font-weight: 400;
-
-  background: none;
-
-  padding: 0;
-}
-
-@media (min-width: 901px) {
-  .accompagnement-immersif .accompagnement-rencontre {
-    grid-template-columns:
-      minmax(0, 200px)
-      minmax(0, 1fr)
-      minmax(0, 220px);
-    gap: 28px;
-  }
-
-  .accompagnement-immersif .accompagnement-signature {
-    grid-column: 3;
-    grid-row: 1;
-    align-self: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .accompagnement-immersif .accompagnement-rencontre {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .accompagnement-immersif .accompagnement-signature {
-    grid-column: 1;
-    grid-row: auto;
-    font-size: 28px !important;
-  }
-}
-@media (min-width: 901px) {
-  .accompagnement-immersif .accompagnement-photo {
-    position: relative;
-    z-index: 1;
-    transform: translateY(-56px);
-    margin-bottom: -56px;
-  }
-}
-
-.accompagnement-immersif .accompagnement-signature {
-  isolation: isolate;
-  padding: 24px 20px;
-}
-
-/* Citation : contraste typographique */
-
-.accompagnement-immersif .accompagnement-signature {
-  margin: 0;
-  padding: 0;
-  align-self: center;
-  justify-self: start;
-}
-
-.accompagnement-immersif .signature-intro {
-  display: block;
-  font-family: "DM Sans", sans-serif !important;
-  font-size: 19px !important;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.accompagnement-immersif .signature-impact {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 9px;
-  font-family: "Fraunces", serif !important;
-  font-weight: 600 !important;
-  font-style: normal;
-  letter-spacing: normal;
-
-  font-size: clamp(32px, 3vw, 46px) !important;
-
-  white-space: nowrap;
-
-  background: #f5ec42;
-}
-
-@media (min-width: 901px) {
-  .accompagnement-immersif .accompagnement-rencontre {
-    grid-template-columns:
-      minmax(0, 200px)
-      minmax(0, 740px)
-      minmax(0, 340px);
-    justify-content: center;
-    gap: clamp(24px, 2.5vw, 40px);
-  }
-
-  .accompagnement-immersif .accompagnement-signature {
-    grid-column: 3;
-    grid-row: 1;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1150px) {
-  .accompagnement-immersif .signature-impact {
-    font-size: 30px !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .accompagnement-immersif .accompagnement-signature {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .accompagnement-immersif .signature-impact {
-    font-size: clamp(28px, 7vw, 40px) !important;
-    max-width: 100%;
-    white-space: normal;
-  }
-}
-
-.accompagnement-immersif .accompagnement-signature {
-  padding-right: 26px;
-}
-
-.accompagnement-immersif .accompagnement-signature::after {
-  top: 0;
-  bottom: 0;
-  right: 0;
-
-  background: #f5ec42;
-  pointer-events: none;
-}
-
-.accompagnement-immersif .accompagnement-signature {
-  padding: 0 26px 0 0;
-}
-
-.accompagnement-immersif .signature-intro,
-.accompagnement-immersif .signature-impact {
-  font-family: "Fraunces", serif !important;
-  font-style: normal;
-  font-weight: 400 !important;
-
-  background: none !important;
-  padding: 0;
-}
-
-.accompagnement-immersif .signature-intro {
-  font-size: 24px !important;
-  line-height: 1.25;
-  color: #302631 !important;
-}
-
-.accompagnement-immersif .signature-impact {
-  margin-top: 6px;
-  font-size: 38px !important;
-  line-height: 1.1;
-
-  color: #e86d55 !important;
-}
-
-.accompagnement-immersif .accompagnement-signature::after {
-  inset: 0 0 0 auto;
-
-  background: #f5ec42;
-}
-
 .accompagnement-immersif .accompagnement-signature {
   position: relative;
+  margin: 0;
   padding: 0 24px 0 0;
   text-align: right;
+  justify-self: end;
 }
-
 .accompagnement-immersif .signature-intro,
 .accompagnement-immersif .signature-impact {
   display: block;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-family: "DM Sans", sans-serif !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
+  margin: 0;
+  color: #171717;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: #171717 !important;
-  background: none !important;
-  text-align: right;
+  letter-spacing: -.02em;
 }
-
-.accompagnement-immersif .signature-intro {
-  font-size: 24px !important;
-}
-
-.accompagnement-immersif .signature-impact {
-  margin-top: 2px !important;
-  font-size: 38px !important;
-  text-transform: uppercase;
-}
-
-.accompagnement-immersif .accompagnement-signature::before {
-  content: none;
-}
-
+.accompagnement-immersif .signature-intro { font-size: clamp(20px, 2vw, 28px); }
+.accompagnement-immersif .signature-impact { margin-top: 2px; font-size: clamp(30px, 3vw, 44px); text-transform: uppercase; }
 .accompagnement-immersif .accompagnement-signature::after {
   content: "";
   position: absolute;
   inset: 0 0 0 auto;
   width: 12px;
-  border-radius: 0;
   background: #e86d55;
 }
-
-@media (min-width: 901px) {
-  .accompagnement-immersif .signature-intro {
-    font-size: 28px !important;
+@media (max-width: 900px) {
+  .accompagnement-immersif .accompagnement-scene-copy { width: 58%; }
+  .accompagnement-immersif .accompagnement-rencontre { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .accompagnement-immersif .accompagnement-signature { justify-self: end; }
+}
+@media (max-width: 700px) {
+  #mon-accompagnement.accompagnement-immersif { scroll-margin-top: 80px; }
+  .accompagnement-immersif .accompagnement-scene {
+    display: block;
+    min-height: 0;
+    padding: 30px 24px 135px;
+    background-image: linear-gradient(180deg, rgba(25,20,24,.87), rgba(25,20,24,.68) 58%, rgba(25,20,24,.12)),
+      url("images/bandeau-accompagnement.png?v=20261016");
+    background-position: center, 78% bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-
-  .accompagnement-immersif .signature-impact {
-    font-size: 44px !important;
-  }
-
-  .accompagnement-immersif .accompagnement-photo {
-    left: -24px;
-  }
-
-  .accompagnement-immersif .accompagnement-recit {
-    position: relative;
-    left: -24px;
-  }
+  .accompagnement-immersif .accompagnement-scene-copy { width: 100%; max-width: none; }
+  .accompagnement-immersif #accompagnement-title,
+  .accompagnement-immersif #accompagnement-title em { font-size: 34px !important; }
+  .accompagnement-immersif .accompagnement-rencontre { padding: 30px 24px; }
+  .accompagnement-deroule summary { padding: 20px 0; }
+  .accompagnement-deroule-titre { font-size: 25px; }
+  .accompagnement-deroule-aide { font-size: 13px; }
 }
 
 /* Bandeau : dégradé coloré, texte sur une ligne */
@@ -3283,43 +2993,6 @@ background: rgba(245, 236, 66, 0.7);
 
   .legal-page h1 {
     margin-bottom: 45px;
-  }
-}
-
-/* MON ACCOMPAGNEMENT — MOBILE */
-@media (max-width: 700px) {
-  #mon-accompagnement .accompagnement-scene-copy {
-    display: block;
-    width: 100%;
-    max-width: none;
-    background: transparent;
-  }
-
-  #mon-accompagnement .accompagnement-scene-copy .accompagnement-conviction {
-    display: block;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    color: #f5f0e9;
-  }
-
-  #mon-accompagnement .accompagnement-rencontre {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #mon-accompagnement .accompagnement-recit {
-    order: 1;
-  }
-
-  #mon-accompagnement .accompagnement-photo {
-    order: 2;
-  }
-
-  #mon-accompagnement .accompagnement-signature {
-    order: 3;
-    align-self: flex-end;
   }
 }
 

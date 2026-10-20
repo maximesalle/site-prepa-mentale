@@ -1869,12 +1869,6 @@ html {
   max-width: 440px;
 }
 
-.contact-bilan {
-  margin-top: 26px;
-  padding: 24px;
-  background: #35051E;
-}
-
 .contact-free {
   display: inline-block;
   margin-bottom: 14px;
@@ -2044,7 +2038,7 @@ html {
 #contact .contact-bilan {
   margin-top: 0;
   padding: 24px;
-  background: #ede4e7;
+  background: #35051E;
 }
 
 #contact .contact-bilan h2 {

@@ -516,17 +516,20 @@ h3,
 }
 
 .wayfinder a span {
-  font: 700 38px var(--sans);
+  font-family: var(--sans) !important;
+  font-size: 32px !important;
+  font-weight: 400;
   line-height: 1;
   color: #f5ec42;
-  align-self: flex-start;
 }
 
 .wayfinder a b {
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--sans) !important;
+  font-size: 20px !important;
+  font-weight: 500;
   line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--paper);
 }
 
 .wayfinder a:hover {

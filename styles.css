@@ -2672,7 +2672,7 @@ background: rgba(245, 236, 66, 0.7);
 
 .accompagnement-deroule summary:hover .about-dropdown-icon {
   transform: rotate(90deg);
-  background: #dce94d;
+  background: var(--coral);
 }
 .accompagnement-immersif .accompagnement-recit p + p { margin-top: 14px; }
 .accompagnement-immersif .accompagnement-surlignage {

@@ -2749,7 +2749,6 @@ background: rgba(245, 236, 66, 0.7);
 .accompagnement-deroule summary:focus-visible { outline: 2px solid #916da0; outline-offset: 4px; }
 .accompagnement-deroule-label { display: grid; gap: 7px; }
 .accompagnement-deroule-kicker { color: #916da0; font: 700 11px/1.3 "DM Sans", sans-serif; letter-spacing: .08em; }
-.accompagnement-deroule-titre { font: 400 clamp(24px, 2.5vw, 36px)/1.2 "Fraunces", Georgia, serif; }
 .accompagnement-deroule-aide { font: 400 14px/1.5 "DM Sans", sans-serif; }
 .accompagnement-deroule-icone {
   display: grid;
@@ -2770,6 +2769,16 @@ background: rgba(245, 236, 66, 0.7);
   font: 400 15px/1.7 "DM Sans", sans-serif !important;
   text-align: left;
   hyphens: none;
+}
+
+.about-dropdown-description {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-dropdown-icon {
+  flex-shrink: 0;
 }
 .accompagnement-immersif .accompagnement-recit p + p { margin-top: 14px; }
 .accompagnement-immersif .accompagnement-surlignage {

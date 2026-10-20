@@ -1566,9 +1566,9 @@ html {
 }
 
 #offres .offer-card-featured {
-  background: var(--ink);
+  background: #35051E;
   color: var(--paper);
-  border-color: var(--ink);
+  border-color: #35051E;
 }
 
 #offres .offer-card-featured .offer-purpose {

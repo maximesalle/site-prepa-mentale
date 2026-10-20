@@ -2048,12 +2048,14 @@ html {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.015em;
+  color: var(--paper);
 }
 
 #contact .contact-bilan p {
   margin: 0;
   font-size: 15px !important;
   line-height: 1.55;
+  color: var(--paper);
 }
 
 #contact .contact-bilan .contact-reassurance {

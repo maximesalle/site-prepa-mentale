@@ -260,75 +260,9 @@ footer a {
   transform: translateY(-40%);
 }
 
-.wayfinder {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  background: var(--ink);
-  padding: 30px 36px;
-  gap: 24px;
-}
-
-.wayfinder > * {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-
-  min-height: 105px;
-  padding: 0 0 16px;
-  border-right: none;
-  border-bottom: 1px solid rgba(245, 240, 233, 0.35);
-
-  color: var(--paper);
-  text-decoration: none;
-  transition: border-color 0.25s ease;
-}
-
-.wayfinder > *:first-child,
-.wayfinder > *:last-child {
-  padding-left: 0;
-}
-
-.wayfinder a {
-  font: 500 14px var(--sans);
-  color: var(--paper);
-}
-
-.wayfinder a span {
-  font: 700 38px var(--sans);
-  line-height: 1;
-  color: #f5ec42;
-  align-self: flex-start;
-}
-
-.wayfinder a b {
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.wayfinder a:hover {
-  background: transparent;
-  padding-left: 0;
-  border-bottom-color: #f5ec42;
-}
-
-.wayfinder a:hover b {
-  color: #f5ec42;
-}
-
 .situations {
   padding-top: 90px;
   padding-bottom: 90px;
-}
-
-@media (max-width: 900px) {
-  .wayfinder a {
-    min-height: 70px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -341,28 +275,6 @@ footer a {
   .hero-copy {
     transform: none;
   }
-
-  .wayfinder a {
-    border-top: 1px solid rgba(48, 38, 49, 0.22);
-    font-size: 13px;
-  }
-
-  .wayfinder a:nth-of-type(2n) {
-    border-right: 0;
-  }
-
-  .wayfinder a:hover {
-    padding-left: 9px;
-  }
-
-  .wayfinder a span {
-    display: none;
-  }
-
-  .wayfinder a b {
-    font-size: 17px;
-  }
-
   .situations {
     padding: 70px 23px;
   }
@@ -439,20 +351,6 @@ h3,
   white-space: nowrap;
 }
 
-.wayfinder a span {
-  display: none;
-}
-
-.wayfinder a b {
-  margin-left: auto;
-}
-
-@media (max-width: 900px) {
-  .wayfinder {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 @media (max-width: 700px) {
   :root {
     --type-display: 48px;
@@ -472,10 +370,6 @@ h3,
     width: auto;
   }
 
-  .wayfinder a {
-    white-space: normal;
-  }
-}
 
 .site-header .brand span {
   text-transform: none !important;
@@ -585,77 +479,64 @@ h3,
     margin: 18px 23px 28px;
   }
 }
-
 .wayfinder {
+  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding: 0 clamp(22px, 5vw, 80px);
-  border-top: 0;
-  border-bottom: 1px solid rgba(48, 38, 49, 0.24);
-  background-color: var(--paper);
+  background: var(--ink);
+  padding: 30px 36px;
+  gap: 24px;
 }
 
 .wayfinder > * {
-  min-height: 0;
-}
-
-.wayfinder a {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  gap: 7px;
-  min-height: 88px;
-  padding: 14px 17px !important;
-  border: 0;
-  border-right: 1px solid rgba(48, 38, 49, 0.2);
+  justify-content: space-between;
+  gap: 16px;
+
+  min-height: 105px;
+  padding: 0 0 16px;
+  border-right: none;
+  border-bottom: 1px solid rgba(245, 240, 233, 0.35);
+
+  color: var(--paper);
+  text-decoration: none;
+  transition: border-color 0.25s ease;
+}
+
+.wayfinder > *:first-child,
+.wayfinder > *:last-child {
+  padding-left: 0;
+}
+
+.wayfinder a {
+  font: 500 14px var(--sans);
+  color: var(--paper);
+}
+
+.wayfinder a span {
+  font: 700 38px var(--sans);
+  line-height: 1;
+  color: #f5ec42;
+  align-self: flex-start;
+}
+
+.wayfinder a b {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.wayfinder a:hover {
   background: transparent;
-  text-decoration: none;
-  transition: background 0.2s;
+  padding-left: 0;
+  border-bottom-color: #f5ec42;
 }
 
-.wayfinder a:last-child {
-  border-right: 0;
-}
-
-.wayfinder a span:first-child {
-  display: block;
-  align-self: auto;
-  font: 600 15px/1 var(--sans);
-  font-size: 15px !important;
-  letter-spacing: 0.04em;
-  color: #987da5;
-}
-
-.wayfinder a .wayfinder-title {
-  display: block;
-  align-self: auto;
-  font: 500 clamp(16px, 1.35vw, 19px)/1.2 var(--serif);
-  font-family: var(--serif) !important;
-  font-size: clamp(16px, 1.35vw, 19px) !important;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.wayfinder a:hover,
-.wayfinder a:focus-visible {
-  background: var(--apricot);
-  transform: none;
-}
-
-.wayfinder a:hover .wayfinder-title,
-.wayfinder a:focus-visible .wayfinder-title,
-.wayfinder a:active .wayfinder-title,
-.wayfinder a.is-active .wayfinder-title {
-  text-decoration: underline;
-  text-decoration-color: var(--coral);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
-}
-
-.wayfinder a:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: -3px;
+.wayfinder a:hover b {
+  color: #f5ec42;
 }
 
 @media (max-width: 700px) {

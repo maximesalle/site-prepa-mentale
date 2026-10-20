@@ -494,8 +494,8 @@ h3,
   align-items: flex-start;
   justify-content: flex-start;
   gap: 8px;
-  min-height: 105px;
-  padding: 0 0 16px;
+  min-height: 0px;
+  padding: 0 0 12px;
   border-bottom: 1px solid rgba(245, 240, 233, 0.35);
   color: var(--paper);
   text-decoration: none;

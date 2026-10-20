@@ -485,7 +485,7 @@ h3,
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   padding: 30px 36px;
-  background: var(--ink);
+  background: #35051E;
 }
 
 .wayfinder a {

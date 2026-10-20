@@ -523,10 +523,6 @@ h3,
   border-bottom-color: #f5ec42;
 }
 
-.wayfinder a:hover .wayfinder-title {
-  color: #f5ec42;
-}
-
 .wayfinder a:focus-visible {
   outline: 2px solid #f5ec42;
   outline-offset: 4px;

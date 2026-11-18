@@ -2569,8 +2569,8 @@ background: rgba(245, 236, 66, 0.7);
 .accompagnement-immersif .accompagnement-scene {
   display: flex;
   align-items: center;
-  min-height: 440px;
-  padding: 40px clamp(24px, 5vw, 80px);
+  min-height: 360px;
+  padding: 30px clamp(24px, 5vw, 80px);
   background: linear-gradient(90deg, rgba(25,20,24,.65), rgba(25,20,24,.35) 45%, transparent 70%),
     url("images/bandeau-accompagnement.png?v=20261016") center / cover no-repeat;
 }
@@ -2752,7 +2752,7 @@ background: rgba(245, 236, 66, 0.7);
   display: grid;
   place-items: center;
   min-height: 0;
-  padding: 32px 24px;
+  padding: 20px 24px;
   background: #c6b6cf;
 }
 

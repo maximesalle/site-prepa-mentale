@@ -1132,6 +1132,7 @@ html {
 
 #offres {
   background: #f1e2db;
+  padding-bottom: 30px;
 }
 
 #offres .offers-steps {
@@ -2752,7 +2753,7 @@ background: rgba(245, 236, 66, 0.7);
   display: grid;
   place-items: center;
   min-height: 0;
-  padding: 20px 24px;
+  padding: 32px 24px;
   background: #c6b6cf;
 }
 

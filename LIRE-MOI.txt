@@ -1,27 +1,11 @@
-SITE DE MAXIME SALLÉ — FICHIERS POUR GITHUB
+SITE PRÉPARATION MENTALE — LIVRAISON TECHNIQUE
 
-1. Décompressez le ZIP.
-2. Dans votre dépôt GitHub, remplacez index.html par le nouveau fichier.
-3. Ajoutez styles.css, script.js et le dossier images au même niveau.
-4. Enregistrez avec Commit changes.
+Source : dernière archive transmise, avec images WebP et retrait des ressources obsolètes.
+Optimisations CSS effectuées : suppression des déclarations strictement dupliquées dans un bloc, fusion de règles immédiatement adjacentes à sélecteur identique, et fusion des contextes @media adjacents identiques.
+La cascade CSS a été conservée : il n'est pas sûr de supprimer tous les !important ou de fusionner des règles éloignées, car des interactions de spécificité et de responsive peuvent en dépendre.
 
-Ne téléversez pas le ZIP lui-même : téléversez son contenu.
-Pour voir le site sur votre ordinateur, ouvrez index.html après décompression.
+Vérifications et chiffres : AUDIT-FINAL.json.
 
-MODIFICATIONS
-- Corps de texte : 15 px sur ordinateur.
-- Paragraphes de Mon accompagnement : 14 px sur ordinateur.
-- Marges et taille de photo réduites pour une section plus compacte.
-- Les règles mobiles et les polices Fraunces / DM Sans sont conservées.
-- Le CSS est extrait et mis en forme ; son ordre est conservé pour préserver le rendu.
-- Les trois images intégrées au HTML sont maintenant des fichiers dans images.
+MISE EN LIGNE : sauvegarder le dépôt actuel, importer le contenu de ce dossier à la racine du dépôt GitHub, supprimer les anciennes images inutilisées si nécessaire, puis tester menu mobile, liens, contact, et réservation Cal.com en ligne.
 
-POUR MODIFIER
-- Textes et liens : index.html.
-- Couleurs, tailles et espacements : styles.css.
-- Images : dossier images.
-- Menu mobile : script.js.
-
-Les pages offres.html et contact.html sont référencées, mais ne sont pas présentes
- dans le fichier fourni. Si vous les avez déjà, conservez-les dans votre dépôt.
-La photo de portrait reste celle du fichier source.
+LIMITES : Comparaison visuelle navigateur bloquée par la politique réseau locale. Intégration Cal.com non testée de bout en bout. La réduction du CSS reste conservatrice ; une refonte intégrale sans test visuel serait risquée.

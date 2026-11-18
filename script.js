@@ -15,19 +15,6 @@ mainNav?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// Repère de la section sélectionnée dans le sommaire.
-const sectionLinks = document.querySelectorAll('.wayfinder a[href^="#"]');
-function markCurrentSection() {
-  sectionLinks.forEach((link) => {
-    link.classList.toggle(
-      "is-active",
-      location.hash === link.getAttribute("href"),
-    );
-  });
-}
-addEventListener("hashchange", markCurrentSection);
-markCurrentSection();
-
 // Sélection des situations et affichage du panneau.
 (() => {
   const explorer = document.querySelector(".situations-explorer");
@@ -38,8 +25,7 @@ markCurrentSection();
   if (!panel || !buttons.length) return;
   const mobile = window.matchMedia("(max-width: 700px)");
 
-  
-const situations = [
+  const situations = [
   {
     description:
       "Vous avez préparé votre compétition, votre oral ou votre présentation. Pourtant, la pression prend le dessus et vous empêche de montrer ce dont vous êtes capable.",

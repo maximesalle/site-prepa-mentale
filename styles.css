@@ -278,13 +278,14 @@ footer a {
   .situations {
     padding: 70px 23px;
   }
-}
 
-@media (max-width: 700px) {
+
   .hero h1 {
     font-size: clamp(47px, 10.6vw, 70px);
   }
 }
+
+
 
 :root {
   --paper: #f5f0e9;
@@ -479,76 +480,7 @@ h3,
     margin: 18px 23px 28px;
   }
 }
-/* NAVIGATION SOUS L’INTRODUCTION — numéros citron, titres beige */
-.wayfinder {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  padding: 30px 36px;
-  background: #35051E;
-}
 
-.wayfinder a {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 8px;
-  min-height: 0px;
-  padding: 0 0 12px;
-  border-bottom: 1px solid rgba(245, 240, 233, 0.35);
-  color: var(--paper);
-  text-decoration: none;
-  transition: border-color 0.25s ease;
-}
-
-.wayfinder a > span:first-child {
-  font-family: var(--sans);
-  font-size: 15px !important;
-  font-weight: 400;
-  line-height: 1;
-  color: #f5ec42;
-}
-
-.wayfinder a .wayfinder-title {
-  font-family: var(--serif);
-  font-size: 19px !important;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: normal;
-  color: var(--paper);
-}
-
-.wayfinder a:hover {
-  border-bottom-color: #f5ec42;
-}
-
-.wayfinder a:focus-visible {
-  outline: 2px solid #f5ec42;
-  outline-offset: 4px;
-}
-
-@media (max-width: 700px) {
-  .wayfinder {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px 12px;
-    padding: 8px 23px 12px;
-  }
-
-  .wayfinder a {
-    min-height: 76px;
-    padding: 10px 6px;
-    border-bottom: 0;
-  }
-
-  .wayfinder a .wayfinder-title {
-    font-size: 17px !important;
-  }
-
-  .wayfinder a > span:first-child {
-    font-size: 14px !important;
-  }
-}
 
 .site-header nav a.nav-contact {
   display: inline-flex;
@@ -862,9 +794,8 @@ html {
     grid-column: 1;
     grid-row: 5;
   }
-}
 
-@media (min-width: 701px) {
+
   #situations > .situations-contexts {
     flex-wrap: nowrap;
     gap: 12px 24px;
@@ -874,6 +805,8 @@ html {
     white-space: nowrap;
   }
 }
+
+
 
 #situations > .situations-contexts {
   display: flex;
@@ -2401,14 +2334,15 @@ html {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: normal;
-}
 
-#mon-accompagnement .accompagnement-conviction h2 {
+
   font-family: var(--serif) !important;
   font-size: 28px !important;
   color: #302631;
   margin: 0 0 16px;
 }
+
+
 
 #situations .situation-choice.is-selected .situation-number {
   position: relative;
@@ -2573,7 +2507,7 @@ background: rgba(245, 236, 66, 0.7);
   min-height: 360px;
   padding: 30px clamp(24px, 5vw, 80px);
   background: linear-gradient(90deg, rgba(25,20,24,.65), rgba(25,20,24,.35) 45%, transparent 70%),
-    url("images/bandeau-accompagnement.png?v=20261016") center / cover no-repeat;
+    url("images/bandeau-accompagnement.webp?v=20261118-clean") center / cover no-repeat;
 }
 .accompagnement-immersif .accompagnement-scene-copy { width: 48%; max-width: 580px; }
 .accompagnement-immersif .accompagnement-scene .eyebrow { margin: 0 0 20px; color: #f5f0e9; }
@@ -2648,10 +2582,9 @@ background: rgba(245, 236, 66, 0.7);
 }
 
 .about-dropdown-icon {
-  flex-shrink: 0;
-}
+  
 
-.about-dropdown-icon {
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2670,6 +2603,8 @@ background: rgba(245, 236, 66, 0.7);
 
   transition: transform 0.2s ease, background 0.2s ease;
 }
+
+
 
 .accompagnement-deroule summary:hover .about-dropdown-icon {
   transform: rotate(90deg);
@@ -2730,7 +2665,7 @@ background: rgba(245, 236, 66, 0.7);
     min-height: 0;
     padding: 30px 24px 135px;
     background-image: linear-gradient(180deg, rgba(25,20,24,.87), rgba(25,20,24,.68) 58%, rgba(25,20,24,.12)),
-      url("images/bandeau-accompagnement.png?v=20261016");
+      url("images/bandeau-accompagnement.webp?v=20261118-clean");
     background-position: center, 78% bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3283,10 +3218,7 @@ color: #8d6a9f;
   width: fit-content;
 }
 
-/* Masquer le sommaire secondaire */
-.wayfinder {
-  display: none;
-}
+
 
 /* Contraste subtil de la section Vos situations */
 .situations-editorial {

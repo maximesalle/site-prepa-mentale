@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght,SOFT,WONK@9..144,400,20,0;9..144,500,20,0;9..144,600,20,0&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20261016" />
+    <link rel="stylesheet" href="styles.css?v=20261118-final" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -205,34 +205,14 @@
 
   <img
     class="signature-portrait"
-    src="images/portrait-maxime.jpg"
+    src="images/portrait-maxime.webp"
     alt="Portrait de Maxime Sallé"
     fetchpriority="high"
-  >
+   decoding="async">
 </div>
   </div>
  
 </section>
-
-      <nav class="wayfinder" aria-label="Explorer la page">
-       <a href="#situations">
-          <span>01</span>
-          <span class="wayfinder-title">Vos situations</span>
-        </a>
-        <a href="#mon-accompagnement">
-          <span>02</span>
-          <span class="wayfinder-title">Mon accompagnement</span>
-        </a>
-        
-        <a href="#offres">
-          <span>03</span>
-          <span class="wayfinder-title">Offres &amp; tarifs</span>
-        </a>
-        <a href="#contact">
-          <span>04</span>
-          <span class="wayfinder-title">Contact</span>
-        </a>
-      </nav>
        <section
         class="situations situations-editorial"
         id="situations"
@@ -730,16 +710,13 @@
       })(window, "https://app.cal.com/embed/embed.js", "init");
       Cal("init", "bilan-offert", { origin: "https://app.cal.com" });
       Cal.ns["bilan-offert"]("ui", {
-  hideEventTypeDetails: false,
-  layout: "month_view",
-  theme: "light",
-  styles: {
-    branding: {
-      brandColor: "#E96C56"
-    }
-  }
-});
+        hideEventTypeDetails: false,
+        layout: "month_view",
+        theme: "light",
+        styles: {
+          branding: { brandColor: "#E96C56" }
+        }
+      });
     </script>
   </body>
 </html>
-<!-- Relance deploiement GitHub Pages -->

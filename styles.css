@@ -3281,3 +3281,8 @@ color: #8d6a9f;
   align-self: flex-start;
   width: fit-content;
 }
+
+/* Masquer le sommaire secondaire */
+.wayfinder {
+  display: none;
+}

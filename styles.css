@@ -3286,3 +3286,8 @@ color: #8d6a9f;
 .wayfinder {
   display: none;
 }
+
+/* Contraste subtil de la section Vos situations */
+.situations-editorial {
+  background-color: #F0E9E2;
+}

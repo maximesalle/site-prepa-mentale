@@ -3223,3 +3223,55 @@ color: #8d6a9f;
 #contact .contact-direct h3 { font-size: 21px; }
 #contact .contact-direct a { display: block; width: fit-content; margin: 8px 0; color: var(--ink); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 700px) { #contact .contact-actions { padding: 22px; } }
+
+
+
+/* CONTACT : deux colonnes équilibrées */
+
+#contact .contact-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+#contact .contact-copy,
+#contact .contact-actions {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#contact .contact-bilan {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#contact .contact-booking {
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#contact .contact-actions .contact-direct {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(48, 38, 49, 0.2);
+}
+
+/* Adaptation sur téléphone */
+
+@media (max-width: 700px) {
+  #contact .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  #contact .contact-booking {
+    margin-top: 20px;
+  }
+
+  #contact .contact-actions .contact-direct {
+    margin-top: 24px;
+  }
+}

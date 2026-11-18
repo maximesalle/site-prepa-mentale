@@ -3275,3 +3275,9 @@ color: #8d6a9f;
     margin-top: 24px;
   }
 }
+
+/* Étiquette Bilan offert */
+#contact .contact-free {
+  align-self: flex-start;
+  width: fit-content;
+}
